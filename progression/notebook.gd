@@ -234,7 +234,7 @@ func draw_book():
  elif selected_tab==2:draw_dressing()
  else:draw_honors()
  if last_save_error!=OK:g.centered("Sauvegarde indisponible sur cet appareil.",1148,18,g.CORAL)
- elif notice!="":g.centered(notice,1148,18,g.TEAL)
+ elif notice!="" and selected_tab!=1:g.centered(notice,1148,18,g.TEAL)
  g.button(Rect2(80,1185,560,64),"RETOUR",g.INK)
  if modal!="":draw_modal()
 func draw_tasks():
@@ -262,35 +262,36 @@ func shop_item() -> Dictionary:
  if visible.is_empty():return {}
  shop_index=clampi(shop_index,0,visible.size()-1)
  return visible[shop_index]
+func shop_cell(i: int) -> Rect2:
+ return Rect2(28+(i%4)*170,420+int(i/4)*124,154,112)
+func shop_locked(item: Dictionary) -> bool:
+ return not owned.has(item.id) and item.id!=visible_items(CATEGORIES[category_index])[-1].id
 func draw_shop():
  draw_categories()
- var item=shop_item()
- if item.is_empty():return
- var purchased=owned.has(item.id)
- var locked=not purchased and item.id!=visible_items(CATEGORIES[category_index])[-1].id
- if locked:
-  g.centered("ARTICLE MYSTÈRE",430,24,g.PURPLE,g.title_font)
-  g.rounded(Rect2(75,455,570,410),Color("d9d0c5"),22,2)
-  renderer.draw_locked(item,Rect2(150,475,420,310))
-  g.draw_arc(Vector2(360,627),36,PI,TAU,32,g.INK,12,true)
-  g.rounded(Rect2(310,620,100,80),g.INK,14)
-  g.draw_circle(Vector2(360,651),9,g.GOLD)
-  g.draw_line(Vector2(360,653),Vector2(360,675),g.GOLD,7)
-  g.centered("VERROUILLÉ",830,30,g.INK,g.title_font)
-  g.button(Rect2(32,650,70,66),"‹",g.PURPLE)
-  g.button(Rect2(618,650,70,66),"›",g.PURPLE)
-  g.centered("Achète l’article précédent pour le découvrir.",950,23)
-  return
- g.centered("ARTICLE POSSÉDÉ" if purchased else "PROCHAIN ARTICLE",430,24,g.TEAL,g.title_font)
- g.rounded(Rect2(75,455,570,410),Color.WHITE,22,2)
- renderer.draw_item(item,Rect2(150,475,420,310))
- fit_label(item.name,Rect2(95,830,530,40),30,g.INK,g.title_font)
- g.button(Rect2(32,650,70,66),"‹",g.PURPLE)
- g.button(Rect2(618,650,70,66),"›",g.PURPLE)
- g.centered(g.ui_text("%d PIÈCES")%item.price,924,35,g.PURPLE,g.title_font)
- g.button(Rect2(100,955,520,70),"CHOISIR DANS VESTIAIRE" if purchased else "ACHETER",g.TEAL if purchased or coins>=item.price else g.INK)
- g.centered("Le prochain article apparaît après cet achat.",1070,21)
- if not purchased and coins<item.price:g.centered(g.ui_text("Il te manque %d pièces.")%(item.price-coins),1110,21,g.CORAL)
+ var options=items_for(CATEGORIES[category_index])
+ for i in options.size():
+  var item=options[i];var r=shop_cell(i);var locked=shop_locked(item)
+  g.rounded(r,Color("dcd3c6") if locked else Color.WHITE,12,2)
+  if i==shop_index and not locked:g.draw_rect(r.grow(2),g.TEAL,false,3)
+  var art=Rect2(r.position+Vector2(9,6),Vector2(136,82))
+  if locked:
+   renderer.draw_locked(item,art)
+   var c=r.get_center()
+   g.draw_arc(c+Vector2(0,-12),12,PI,TAU,20,g.INK,5,true)
+   g.rounded(Rect2(c+Vector2(-18,-13),Vector2(36,30)),g.INK,6)
+   g.draw_circle(c+Vector2(0,-2),4,g.GOLD)
+  else:
+   renderer.draw_item(item,art)
+   fit_label("ARTICLE POSSÉDÉ" if owned.has(item.id) else g.ui_text("%d PIÈCES")%item.price,Rect2(r.position.x+4,r.end.y-8,r.size.x-8,25),18,g.TEAL,g.title_font)
+ var selected=shop_item()
+ if not selected.is_empty() and not shop_locked(selected):
+  fit_label(selected.name,Rect2(40,1070,640,36),26,g.INK,g.title_font)
+  g.button(Rect2(100,1090,520,62),"CHOISIR DANS VESTIAIRE" if owned.has(selected.id) else "ACHETER",g.TEAL if owned.has(selected.id) or coins>=selected.price else g.INK)
+func draw_quest_hud():
+ var t=task()
+ g.rounded(Rect2(18,91,684,73),g.PAPER,12,2)
+ fit_label(t.text,Rect2(30,117,660,28),21,g.INK)
+ g.centered("%d / %d"%[current_value(),t.goal],148,26,g.TEAL,g.title_font)
 func dress_options() -> Array:
  var result=[{}]
  for item in items_for(CATEGORIES[category_index]):
@@ -368,16 +369,20 @@ func handle_book(pos: Vector2):
    category_index=i;shop_index=maxi(0,visible_items(CATEGORIES[i]).size()-1);dress_index=0;return
  if selected_tab==1:
   var options=items_for(CATEGORIES[category_index])
-  if Rect2(32,650,70,66).has_point(pos):shop_index=posmod(shop_index-1,options.size())
-  elif Rect2(618,650,70,66).has_point(pos):shop_index=posmod(shop_index+1,options.size())
-  elif Rect2(100,955,520,70).has_point(pos):
+  for i in options.size():
+   if shop_cell(i).has_point(pos):
+    if not shop_locked(options[i]):shop_index=i
+    return
+  if Rect2(100,1090,520,62).has_point(pos):
    var item=shop_item()
+   if shop_locked(item):return
    if owned.has(item.id):
     selected_tab=2;dressing_open=true
     var available=dress_options()
     for i in available.size():
      if available[i].get("id","")==item.id:dress_index=i
-   elif item.id==visible_items(CATEGORIES[category_index])[-1].id and coins>=item.price:modal="buy";modal_item=item.id
+   elif coins>=item.price:modal="buy";modal_item=item.id
+
  else:
   var options=dress_options()
   if Rect2(34,565,76,66).has_point(pos):dress_index=posmod(dress_index-1,options.size())
