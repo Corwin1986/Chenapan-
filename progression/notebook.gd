@@ -149,6 +149,18 @@ func complete_task():
  wait_new_run=(task().event=="slings" and g.sling_level>0) or (task().event=="score" and g.score>=task().goal)
  refresh_active();save_data()
 
+func skip_task() -> bool:
+ var before=[task_cursor,cycle,values.duplicate(true),clean_seconds,wait_new_run]
+ task_cursor+=1
+ if task_cursor>=TASKS.size():task_cursor=0;cycle+=1
+ values={task().id:0};clean_seconds=0.0
+ wait_new_run=(task().event=="slings" and g.sling_level>0) or (task().event=="score" and g.score>=task().goal)
+ refresh_active()
+ if not save_data():
+  task_cursor=before[0];cycle=before[1];values=before[2];clean_seconds=before[3];wait_new_run=before[4]
+  refresh_active();return false
+ toast="";toast_clock=0;return true
+
 func tick(dt: float):
  toast_clock=maxf(0,toast_clock-dt)
  if g.life<previous_life:clean_seconds=0.0
@@ -248,10 +260,11 @@ func draw_tasks():
  if current_value()>0:g.rounded(Rect2(68,642,584.0*current_value()/t.goal,24),g.TEAL,12)
  g.centered(g.ui_text("RÉCOMPENSE : %d PIÈCES")%t.coins,740,32,g.PURPLE,g.title_font)
  if wait_new_run:g.centered("Démarre une nouvelle partie pour ce défi.",796,20,g.CORAL)
- g.centered("Termine ce défi pour découvrir le suivant.",903,23,g.INK)
- g.centered("Il reste actif aussi longtemps que nécessaire.",945,21)
+ g.centered("Termine ou passe ce défi pour découvrir le suivant.",903,23,g.INK)
+ g.centered("Passer est gratuit et ne rapporte aucune pièce.",945,21)
  g.centered("Les défis reviennent pour gagner d'autres pièces.",1000,20,g.TEAL)
  g.button(Rect2(110,1040,500,67),"JOUER")
+ g.button(Rect2(110,1120,500,50),"PASSER CE DÉFI",g.PURPLE)
 func draw_categories():
  for i in CATEGORIES.size():
   var r=Rect2(24+i*139,332,132,56)
@@ -359,6 +372,7 @@ func handle_book(pos: Vector2):
    return
  if selected_tab==0:
   if Rect2(110,1040,500,67).has_point(pos):g.start_game()
+  elif Rect2(110,1120,500,50).has_point(pos):skip_task()
   return
  if selected_tab not in [1,2]:return
  if selected_tab==2 and not dressing_open:

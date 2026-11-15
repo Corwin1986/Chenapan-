@@ -330,6 +330,8 @@ func handle_press(pos: Vector2, pointer_id: int = 0):
 		elif Rect2(125,659,470,64).has_point(pos):
 			ads.abandon_round(); mode = "menu"
 		elif Rect2(125,742,470,60).has_point(pos): open_privacy("pause")
+		elif Rect2(125,818,470,60).has_point(pos):
+			if notebook.skip_task():mode="play"
 		return
 	if mode == "end" or mode == "win":
 		notebook.handle_summary(pos)
@@ -976,7 +978,7 @@ func draw_menu():
 	centered("VILLAGE VS",106,54,INK,title_font)
 	centered("CHENAPAN",177,75,INK,title_font)
 	centered("Recherché pour excès de bêtises",225,22,TEAL)
-	centered("Village vs Chenapan · v1.23",1250,18,INK)
+	centered("Village vs Chenapan · v1.24",1250,18,INK)
 	atlas_sprite(2,Vector2(135,598),220,Color.WHITE,-0.10)
 	atlas_sprite(5,Vector2(580,588),220,Color.WHITE,0.08)
 	atlas_sprite(1,Vector2(360,654),310)
@@ -1065,6 +1067,7 @@ func draw_pause():
 	button(Rect2(125,565,470,76),"REPRENDRE")
 	button(Rect2(125,659,470,64),"RETOUR AU VILLAGE",INK)
 	button(Rect2(125,742,470,60),"CONFIDENTIALITÉ",PURPLE)
+	button(Rect2(125,818,470,60),"PASSER CE DÉFI",PURPLE)
 
 func draw_end():
 	notebook.draw_summary()
