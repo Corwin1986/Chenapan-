@@ -1,0 +1,2057 @@
+{
+  "Recherché pour excès de bêtises": {
+    "en": "Wanted for too much mischief",
+    "es": "Se busca por exceso de travesuras",
+    "zh": "因捣蛋过多而被通缉"
+  },
+  "Tout le village veut t'attraper.": {
+    "en": "The whole village wants to catch you.",
+    "es": "Todo el pueblo quiere atraparte.",
+    "zh": "全村人都想抓住你。"
+  },
+  "Un lance-pierre. Zéro sagesse.": {
+    "en": "One slingshot. Zero good sense.",
+    "es": "Un tirachinas. Cero sensatez.",
+    "zh": "一把弹弓，满脑子坏主意。"
+  },
+  "10 points/s • +100 par assaillant vaincu": {
+    "en": "10 points/s • +100 per pursuer defeated",
+    "es": "10 puntos/s • +100 por perseguidor vencido",
+    "zh": "每秒10分，每击败一名追赶者加100分"
+  },
+  "NOUVELLE PARTIE": {
+    "en": "NEW GAME",
+    "es": "NUEVA PARTIDA",
+    "zh": "开始游戏"
+  },
+  "COMMENT JOUER": {
+    "en": "HOW TO PLAY",
+    "es": "CÓMO JUGAR",
+    "zh": "玩法说明"
+  },
+  "RECORD  %d": {
+    "en": "BEST  %d",
+    "es": "RÉCORD  %d",
+    "zh": "最高分  %d"
+  },
+  "CONFIDENTIALITÉ": {
+    "en": "PRIVACY",
+    "es": "PRIVACIDAD",
+    "zh": "隐私"
+  },
+  "LANGUE": {
+    "en": "LANGUAGE",
+    "es": "IDIOMA",
+    "zh": "语言"
+  },
+  "VERSION TEST ANDROID  1.17": {
+    "en": "ANDROID TEST VERSION  1.17",
+    "es": "VERSIÓN DE PRUEBA ANDROID  1.17",
+    "zh": "安卓测试版 1.17"
+  },
+  "LE PETIT GUIDE": {
+    "en": "QUICK GUIDE",
+    "es": "GUÍA RÁPIDA",
+    "zh": "游戏指南"
+  },
+  "JOUER ET SURVIVRE": {
+    "en": "PLAY AND SURVIVE",
+    "es": "JUGAR Y SOBREVIVIR",
+    "zh": "玩法与生存"
+  },
+  "DÉPLACE-TOI POUR VISER": {
+    "en": "MOVE TO AIM",
+    "es": "MUÉVETE PARA APUNTAR",
+    "zh": "移动来瞄准"
+  },
+  "Glisse dans les quatre directions.": {
+    "en": "Drag in any of the four directions.",
+    "es": "Desliza en las cuatro direcciones.",
+    "zh": "向上下左右四个方向滑动。"
+  },
+  "Relâche pour arrêter le garçon.": {
+    "en": "Release to stop the boy.",
+    "es": "Suelta para detener al niño.",
+    "zh": "松开手指，男孩就会停下。"
+  },
+  "LES TIRS PARTENT TOUT SEULS": {
+    "en": "AUTOMATIC SHOTS",
+    "es": "DISPAROS AUTOMÁTICOS",
+    "zh": "自动射击"
+  },
+  "Droit devant : 2 salves par seconde au départ.": {
+    "en": "Straight ahead: start with 2 volleys per second.",
+    "es": "Hacia delante: al inicio, 2 salvas por segundo.",
+    "zh": "始终向前射击，初始每秒2轮。"
+  },
+  "Place-toi face aux assaillants pour les toucher.": {
+    "en": "Line up with pursuers to hit them.",
+    "es": "Ponte frente a los perseguidores para acertar.",
+    "zh": "对准追赶者所在的位置即可击中他们。"
+  },
+  "LES POINTS": {
+    "en": "SCORING",
+    "es": "LOS PUNTOS",
+    "zh": "得分"
+  },
+  "+10 points par seconde de survie.": {
+    "en": "+10 points for each second you survive.",
+    "es": "+10 puntos por cada segundo de supervivencia.",
+    "zh": "每生存1秒加10分。"
+  },
+  "+100 points par assaillant vaincu.": {
+    "en": "+100 points for each pursuer defeated.",
+    "es": "+100 puntos por cada perseguidor vencido.",
+    "zh": "每击败一名追赶者加100分。"
+  },
+  "LA VIE": {
+    "en": "HEALTH",
+    "es": "LA VIDA",
+    "zh": "生命值"
+  },
+  "Un assaillant inflige 10 dégâts, une seule fois.": {
+    "en": "Each pursuer deals 10 damage, once only.",
+    "es": "Cada perseguidor causa 10 de daño, una sola vez.",
+    "zh": "每名追赶者只能造成一次10点伤害。"
+  },
+  "Un assaillant qui sort en bas ne coûte pas de vie.": {
+    "en": "Pursuers leaving the bottom cost no health.",
+    "es": "Si sale por abajo, no te quita vida.",
+    "zh": "追赶者从屏幕下方离开不会扣除生命值。"
+  },
+  "LES CADEAUX CLASSIQUES": {
+    "en": "REGULAR GIFTS",
+    "es": "REGALOS NORMALES",
+    "zh": "普通礼物"
+  },
+  "Un seul effet à la fois : le nouveau remplace l'ancien.": {
+    "en": "One effect at a time: new gifts replace the old.",
+    "es": "Un solo efecto: el nuevo sustituye al anterior.",
+    "zh": "同时只能有一种效果，新礼物替换旧效果。"
+  },
+  "Durée : 15 s, sauf cœur et piège, immédiats.": {
+    "en": "Lasts 15 s; hearts and traps act immediately.",
+    "es": "Dura 15 s; el corazón y la trampa son inmediatos.",
+    "zh": "持续15秒，爱心和捕兽夹立即生效。"
+  },
+  "TOUS LES BONUS": {
+    "en": "ALL POWER-UPS",
+    "es": "TODAS LAS MEJORAS",
+    "zh": "全部增益"
+  },
+  "DOUBLE GALETS": {
+    "en": "DOUBLE PEBBLES",
+    "es": "PIEDRAS DOBLES",
+    "zh": "双发石子"
+  },
+  "2 galets par salve pendant 15 secondes.": {
+    "en": "2 pebbles per volley for 15 seconds.",
+    "es": "2 piedras por salva durante 15 segundos.",
+    "zh": "每轮发射2颗石子，持续15秒。"
+  },
+  "TRIPLE GALETS": {
+    "en": "TRIPLE PEBBLES",
+    "es": "PIEDRAS TRIPLES",
+    "zh": "三发石子"
+  },
+  "3 galets par salve pendant 15 secondes.": {
+    "en": "3 pebbles per volley for 15 seconds.",
+    "es": "3 piedras por salva durante 15 segundos.",
+    "zh": "每轮发射3颗石子，持续15秒。"
+  },
+  "PIERRES DE FEU": {
+    "en": "FIRE STONES",
+    "es": "PIEDRAS DE FUEGO",
+    "zh": "火焰石子"
+  },
+  "Dégâts ×3 pendant 15 secondes.": {
+    "en": "Damage ×3 for 15 seconds.",
+    "es": "Daño ×3 durante 15 segundos.",
+    "zh": "伤害变为3倍，持续15秒。"
+  },
+  "PIERRES DE GLACE": {
+    "en": "ICE STONES",
+    "es": "PIEDRAS DE HIELO",
+    "zh": "冰冻石子"
+  },
+  "Dégâts normaux et gel de l'ennemi pendant 3 s.": {
+    "en": "Normal damage; freezes the enemy for 3 s.",
+    "es": "Daño normal y congela al enemigo durante 3 s.",
+    "zh": "造成普通伤害，并冻结敌人3秒。"
+  },
+  "Cadeau actif pendant 15 secondes.": {
+    "en": "Gift remains active for 15 seconds.",
+    "es": "El regalo permanece activo 15 segundos.",
+    "zh": "礼物效果持续15秒。"
+  },
+  "PIERRES FOUDRE": {
+    "en": "LIGHTNING STONES",
+    "es": "PIEDRAS ELÉCTRICAS",
+    "zh": "闪电石子"
+  },
+  "Dégâts ×2 et vitesse de l'ennemi divisée par 2, 3 s.": {
+    "en": "Damage ×2; halves enemy speed for 3 s.",
+    "es": "Daño ×2; velocidad enemiga a la mitad, 3 s.",
+    "zh": "伤害变为2倍，并使敌人速度减半3秒。"
+  },
+  "Cadeau actif 15 s ; ce n'est pas une attaque spéciale.": {
+    "en": "Active for 15 s; this is not a special attack.",
+    "es": "Activo 15 s; no es un ataque especial.",
+    "zh": "持续15秒，不属于特殊攻击。"
+  },
+  "BOISSON ÉNERGIE": {
+    "en": "ENERGY DRINK",
+    "es": "BEBIDA ENERGÉTICA",
+    "zh": "能量饮料"
+  },
+  "Cadence ×2 pendant 15 secondes.": {
+    "en": "Fire rate ×2 for 15 seconds.",
+    "es": "Cadencia ×2 durante 15 segundos.",
+    "zh": "射速变为2倍，持续15秒。"
+  },
+  "Se combine avec le lance-pierre déjà obtenu.": {
+    "en": "Stacks with your current slingshot.",
+    "es": "Se combina con tu tirachinas actual.",
+    "zh": "可与当前弹弓的射速叠加。"
+  },
+  "CŒUR": {
+    "en": "HEART",
+    "es": "CORAZÓN",
+    "zh": "爱心"
+  },
+  "+20 points de vie immédiatement, maximum 100.": {
+    "en": "+20 health immediately, up to 100.",
+    "es": "+20 de vida al instante, hasta un máximo de 100.",
+    "zh": "立即恢复20点生命值，上限100。"
+  },
+  "TOUS LES MALUS": {
+    "en": "ALL PENALTIES",
+    "es": "TODAS LAS PENALIZACIONES",
+    "zh": "全部负面效果"
+  },
+  "ŒUFS GUM": {
+    "en": "RUBBER EGGS",
+    "es": "HUEVOS DE GOMA",
+    "zh": "橡胶蛋"
+  },
+  "Dégâts divisés par 2 pendant 15 secondes.": {
+    "en": "Damage halved for 15 seconds.",
+    "es": "Daño reducido a la mitad durante 15 segundos.",
+    "zh": "伤害减半，持续15秒。"
+  },
+  "Il faut donc davantage d'impacts pour vaincre.": {
+    "en": "You need more hits to defeat a pursuer.",
+    "es": "Necesitas más impactos para vencer.",
+    "zh": "需要更多次命中才能击败追赶者。"
+  },
+  "SODA COLLANT": {
+    "en": "STICKY SODA",
+    "es": "REFRESCO PEGAJOSO",
+    "zh": "黏性汽水"
+  },
+  "Déplacements ramenés à 39 % de leur vitesse.": {
+    "en": "Movement reduced to 39% of normal speed.",
+    "es": "Movimiento reducido al 39 % de su velocidad.",
+    "zh": "移动速度降至原来的39%。"
+  },
+  "Durée : 15 secondes.": {
+    "en": "Duration: 15 seconds.",
+    "es": "Duración: 15 segundos.",
+    "zh": "持续15秒。"
+  },
+  "MOINS DE GALETS": {
+    "en": "FEWER PEBBLES",
+    "es": "MENOS PIEDRAS",
+    "zh": "减少石子"
+  },
+  "Retire 2 galets par salve, sans descendre sous 1.": {
+    "en": "Removes 2 pebbles per volley, minimum 1.",
+    "es": "Quita 2 piedras por salva, con un mínimo de 1.",
+    "zh": "每轮减少2颗石子，最少保留1颗。"
+  },
+  "Peut apparaître si tu tires déjà plusieurs galets.": {
+    "en": "May appear when you fire multiple pebbles.",
+    "es": "Puede salir si ya disparas varias piedras.",
+    "zh": "当前每轮发射多颗石子时可能出现。"
+  },
+  "PIÈGE À LOUP": {
+    "en": "WOLF TRAP",
+    "es": "TRAMPA PARA LOBOS",
+    "zh": "捕兽夹"
+  },
+  "Retire 20 % de la vie restante immédiatement.": {
+    "en": "Immediately removes 20% of remaining health.",
+    "es": "Quita al instante el 20 % de la vida restante.",
+    "zh": "立即扣除剩余生命值的20%。"
+  },
+  "Exemple : 50 points de vie deviennent 40.": {
+    "en": "Example: 50 health becomes 40.",
+    "es": "Ejemplo: 50 de vida pasan a ser 40.",
+    "zh": "例如：50点生命值变为40点。"
+  },
+  "LE HASARD DES CADEAUX": {
+    "en": "RANDOM GIFTS",
+    "es": "REGALOS ALEATORIOS",
+    "zh": "随机礼物"
+  },
+  "Chaque série mélange 5 bonus et 5 malus.": {
+    "en": "Each batch mixes 5 power-ups and 5 penalties.",
+    "es": "Cada tanda mezcla 5 mejoras y 5 penalizaciones.",
+    "zh": "每组包含随机排列的5个增益和5个负面效果。"
+  },
+  "Plusieurs malus peuvent donc se suivre.": {
+    "en": "Several penalties can appear in a row.",
+    "es": "Pueden salir varias penalizaciones seguidas.",
+    "zh": "因此可能连续出现多个负面效果。"
+  },
+  "LES LANCE-PIERRES": {
+    "en": "SLINGSHOTS",
+    "es": "LOS TIRACHINAS",
+    "zh": "弹弓升级"
+  },
+  "2 000 POINTS": {
+    "en": "2,000 POINTS",
+    "es": "2.000 PUNTOS",
+    "zh": "2,000分"
+  },
+  "1re occasion : vert, cadence ×2.": {
+    "en": "1st chance: green, fire rate ×2.",
+    "es": "1.ª ocasión: verde, cadencia ×2.",
+    "zh": "第1次机会：绿色，射速2倍。"
+  },
+  "5 000 POINTS": {
+    "en": "5,000 POINTS",
+    "es": "5.000 PUNTOS",
+    "zh": "5,000分"
+  },
+  "2e occasion : bleu, cadence ×3.": {
+    "en": "2nd chance: blue, fire rate ×3.",
+    "es": "2.ª ocasión: azul, cadencia ×3.",
+    "zh": "第2次机会：蓝色，射速3倍。"
+  },
+  "10 000 POINTS": {
+    "en": "10,000 POINTS",
+    "es": "10.000 PUNTOS",
+    "zh": "10,000分"
+  },
+  "3e occasion : rouge, cadence ×4.": {
+    "en": "3rd chance: red, fire rate ×4.",
+    "es": "3.ª ocasión: rojo, cadencia ×4.",
+    "zh": "第3次机会：红色，射速4倍。"
+  },
+  "15 000 POINTS": {
+    "en": "15,000 POINTS",
+    "es": "15.000 PUNTOS",
+    "zh": "15,000分"
+  },
+  "4e occasion : noir, cadence ×5.": {
+    "en": "4th chance: black, fire rate ×5.",
+    "es": "4.ª ocasión: negro, cadencia ×5.",
+    "zh": "第4次机会：黑色，射速5倍。"
+  },
+  "20 000 POINTS": {
+    "en": "20,000 POINTS",
+    "es": "20.000 PUNTOS",
+    "zh": "20,000分"
+  },
+  "5e occasion : violet, cadence ×6.": {
+    "en": "5th chance: purple, fire rate ×6.",
+    "es": "5.ª ocasión: violeta, cadencia ×6.",
+    "zh": "第5次机会：紫色，射速6倍。"
+  },
+  "25 000 POINTS": {
+    "en": "25,000 POINTS",
+    "es": "25.000 PUNTOS",
+    "zh": "25,000分"
+  },
+  "6e et dernière occasion : doré, cadence ×7.": {
+    "en": "6th and final chance: gold, fire rate ×7.",
+    "es": "6.ª y última ocasión: dorado, cadencia ×7.",
+    "zh": "第6次也是最后一次机会：金色，射速7倍。"
+  },
+  "SI TU EN RATES UN": {
+    "en": "IF YOU MISS ONE",
+    "es": "SI TE PIERDES UNO",
+    "zh": "如果错过一次"
+  },
+  "L'occasion est perdue ; le prochain propose le rang": {
+    "en": "That chance is lost; the next offers the missed",
+    "es": "Pierdes esa ocasión; la siguiente ofrece el nivel",
+    "zh": "这次机会将失去，下次仍会提供未获得的等级。"
+  },
+  "manquant. Tu n'atteindras donc pas le dernier rang.": {
+    "en": "rank. You will not reach the final rank.",
+    "es": "pendiente. No podrás alcanzar el último nivel.",
+    "zh": "因此本局无法达到最高等级。"
+  },
+  "Rangs indiqués si toutes les occasions sont ramassées.": {
+    "en": "Ranks shown assume every chance is collected.",
+    "es": "Niveles indicados si recoges todas las ocasiones.",
+    "zh": "以上等级以每次都成功拾取为准。"
+  },
+  "LE CADEAU DES CHIENS": {
+    "en": "THE DOG GIFT",
+    "es": "EL REGALO DE LOS PERROS",
+    "zh": "狗群礼物"
+  },
+  "LE CADEAU ROUGE": {
+    "en": "THE RED GIFT",
+    "es": "EL REGALO ROJO",
+    "zh": "红色礼物"
+  },
+  "Première apparition à 1 000 points, puis tous les": {
+    "en": "First appears at 1,000 points, then every",
+    "es": "Aparece a los 1.000 puntos y luego cada",
+    "zh": "首次出现在1,000分，之后每增加3,000分出现："
+  },
+  "3 000 points : 4 000, 7 000, 10 000, etc.": {
+    "en": "3,000 points: 4,000, 7,000, 10,000, etc.",
+    "es": "3.000 puntos: 4.000, 7.000, 10.000, etc.",
+    "zh": "4,000分、7,000分、10,000分，以此类推。"
+  },
+  "RAMASSE-LE POUR LE GARDER": {
+    "en": "PICK IT UP TO STORE IT",
+    "es": "RECÓGELO PARA GUARDARLO",
+    "zh": "拾取后保留"
+  },
+  "Un onglet avec un os apparaît dans la barre.": {
+    "en": "A bone button appears on the bar.",
+    "es": "Aparece un botón con un hueso en la barra.",
+    "zh": "界面栏中会出现骨头按钮。"
+  },
+  "Les autres cadeaux ne l'effacent pas.": {
+    "en": "Other gifts do not remove it.",
+    "es": "Los demás regalos no lo eliminan.",
+    "zh": "拾取其他礼物不会使它消失。"
+  },
+  "APPUYE SUR L'OS": {
+    "en": "TAP THE BONE",
+    "es": "TOCA EL HUESO",
+    "zh": "点击骨头"
+  },
+  "La meute arrive et élimine tous les assaillants.": {
+    "en": "The pack arrives and defeats all pursuers.",
+    "es": "La jauría llega y elimina a todos los perseguidores.",
+    "zh": "狗群会出现并击败所有追赶者。"
+  },
+  "Une seule utilisation : l'onglet disparaît ensuite.": {
+    "en": "One use only: the button then disappears.",
+    "es": "Un solo uso: después desaparece el botón.",
+    "zh": "只能使用一次，使用后按钮消失。"
+  },
+  "PAS DE CUMUL DE MEUTES": {
+    "en": "ONE PACK AT A TIME",
+    "es": "UNA SOLA JAURÍA A LA VEZ",
+    "zh": "不能囤积狗群"
+  },
+  "Aucun nouveau cadeau chien tant qu'un est gardé": {
+    "en": "No new dog gift while one is stored",
+    "es": "No sale otro regalo de perros si tienes uno guardado",
+    "zh": "持有狗群礼物或场上已有该礼物时，"
+  },
+  "ou déjà présent sur le terrain.": {
+    "en": "or already on the playing field.",
+    "es": "o ya hay uno en el terreno.",
+    "zh": "不会出现新的狗群礼物。"
+  },
+  "SI TU LE RATES": {
+    "en": "IF YOU MISS IT",
+    "es": "SI LO PIERDES",
+    "zh": "如果错过礼物"
+  },
+  "Il faut attendre le prochain palier prévu.": {
+    "en": "Wait until the next scheduled score milestone.",
+    "es": "Espera al siguiente umbral de puntos previsto.",
+    "zh": "必须等到下一个规定分数节点。"
+  },
+  "Il ne réapparaît pas immédiatement.": {
+    "en": "It does not reappear immediately.",
+    "es": "No vuelve a aparecer inmediatamente.",
+    "zh": "礼物不会立即重新出现。"
+  },
+  "LES AMÉLIORATIONS RESTENT": {
+    "en": "UPGRADES STAY",
+    "es": "LAS MEJORAS SE CONSERVAN",
+    "zh": "升级会保留"
+  },
+  "Les lance-pierres sont conservés pendant la partie.": {
+    "en": "You keep your slingshots throughout the game.",
+    "es": "Conservas los tirachinas durante la partida.",
+    "zh": "本局中已获得的弹弓会一直保留。"
+  },
+  "Ils ne remplacent ni le cadeau classique ni les chiens.": {
+    "en": "They replace neither regular gifts nor dogs.",
+    "es": "No sustituyen al regalo normal ni a los perros.",
+    "zh": "弹弓不会替换普通礼物或狗群。"
+  },
+  "PRÉCÉDENT": {
+    "en": "PREVIOUS",
+    "es": "ANTERIOR",
+    "zh": "上一页"
+  },
+  "C'EST COMPRIS !": {
+    "en": "GOT IT!",
+    "es": "¡ENTENDIDO!",
+    "zh": "明白了！"
+  },
+  "SUIVANT": {
+    "en": "NEXT",
+    "es": "SIGUIENTE",
+    "zh": "下一页"
+  },
+  "Son : règle le volume avec les boutons du téléphone.": {
+    "en": "Sound: use your phone's volume buttons.",
+    "es": "Sonido: usa los botones de volumen del teléfono.",
+    "zh": "声音：使用手机音量键调节。"
+  },
+  "PETITE RÉCRÉ": {
+    "en": "TAKE A BREAK",
+    "es": "UN RECREO",
+    "zh": "休息一下"
+  },
+  "Le village attendra.": {
+    "en": "The village can wait.",
+    "es": "El pueblo puede esperar.",
+    "zh": "村民们可以等一等。"
+  },
+  "REPRENDRE": {
+    "en": "RESUME",
+    "es": "REANUDAR",
+    "zh": "继续游戏"
+  },
+  "RETOUR AU VILLAGE": {
+    "en": "BACK TO THE VILLAGE",
+    "es": "VOLVER AL PUEBLO",
+    "zh": "返回村庄"
+  },
+  "LIBRE COMME L'AIR !": {
+    "en": "FREE AS A BIRD!",
+    "es": "¡LIBRE COMO EL VIENTO!",
+    "zh": "自由啦！"
+  },
+  "ATTRAPÉ !": {
+    "en": "CAUGHT!",
+    "es": "¡ATRAPADO!",
+    "zh": "被抓住了！"
+  },
+  "La récré continue demain.": {
+    "en": "More mischief tomorrow.",
+    "es": "Mañana habrá más travesuras.",
+    "zh": "明天继续玩耍。"
+  },
+  "Direction le bureau du proviseur…": {
+    "en": "Off to the headteacher's office…",
+    "es": "Al despacho del director…",
+    "zh": "去校长办公室吧……"
+  },
+  "%d POINTS": {
+    "en": "%d POINTS",
+    "es": "%d PUNTOS",
+    "zh": "%d分"
+  },
+  "%d adultes semés  •  %d boîtes ouvertes": {
+    "en": "%d pursuers defeated • %d gifts opened",
+    "es": "%d perseguidores vencidos • %d regalos abiertos",
+    "zh": "击败%d名追赶者 • 打开%d个礼物"
+  },
+  "Meilleure série : %d  •  Record : %d": {
+    "en": "Best streak: %d • Best score: %d",
+    "es": "Mejor racha: %d • Récord: %d",
+    "zh": "最佳连击：%d • 最高分：%d"
+  },
+  "Temps : %d s": {
+    "en": "Time: %d s",
+    "es": "Tiempo: %d s",
+    "zh": "时间：%d秒"
+  },
+  "MENU": {
+    "en": "MENU",
+    "es": "MENÚ",
+    "zh": "主菜单"
+  },
+  "Les deux continuations ont été utilisées.": {
+    "en": "Both revives have been used.",
+    "es": "Ya has usado las dos continuaciones.",
+    "zh": "两次复活机会已用完。"
+  },
+  "Tu peux jouer sans rien renseigner.": {
+    "en": "You can play without providing any information.",
+    "es": "Puedes jugar sin proporcionar ningún dato.",
+    "zh": "无需填写任何信息即可游玩。"
+  },
+  "Le record et les réglages restent sur ton appareil.": {
+    "en": "Your best score and settings stay on your device.",
+    "es": "Tu récord y ajustes se guardan en tu dispositivo.",
+    "zh": "最高分和设置仅保存在你的设备上。"
+  },
+  "RETOUR": {
+    "en": "BACK",
+    "es": "VOLVER",
+    "zh": "返回"
+  },
+  "Ferme avec la croix pour continuer": {
+    "en": "Close with the X to continue",
+    "es": "Cierra con la X para continuar",
+    "zh": "点击叉号关闭并继续"
+  },
+  "PREMIÈRES BÊTISES": {
+    "en": "FIRST MISCHIEF",
+    "es": "PRIMERAS TRAVESURAS",
+    "zh": "初试恶作剧"
+  },
+  "Sème 30 adultes, sur plusieurs parties.": {
+    "en": "Outrun 30 adults across several games.",
+    "es": "Deja atrás a 30 adultos entre varias partidas.",
+    "zh": "累计击败30名大人。"
+  },
+  "LA RÉCRÉ COMMENCE": {
+    "en": "RECESS BEGINS",
+    "es": "EMPIEZA EL RECREO",
+    "zh": "课间开始"
+  },
+  "Atteins 2 000 points dans une partie.": {
+    "en": "Reach 2,000 points in one game.",
+    "es": "Alcanza 2.000 puntos en una partida.",
+    "zh": "单局达到2000分。"
+  },
+  "PAS VU, PAS PRIS": {
+    "en": "CAN'T CATCH ME",
+    "es": "NO ME ATRAPAS",
+    "zh": "抓不到我"
+  },
+  "Tiens 20 secondes sans perdre de vie.": {
+    "en": "Last 20 seconds without losing health.",
+    "es": "Aguanta 20 segundos sin perder vida.",
+    "zh": "连续20秒不损失生命值。"
+  },
+  "SURPRISE DU VILLAGE": {
+    "en": "VILLAGE SURPRISE",
+    "es": "SORPRESA DEL PUEBLO",
+    "zh": "村庄惊喜"
+  },
+  "Ouvre 10 cadeaux classiques au total.": {
+    "en": "Open 10 regular gifts in total.",
+    "es": "Abre 10 regalos normales en total.",
+    "zh": "累计打开10份普通礼物。"
+  },
+  "LANCE-PIERRE EN MAIN": {
+    "en": "SLINGSHOT READY",
+    "es": "TIRACHINAS LISTO",
+    "zh": "弹弓就绪"
+  },
+  "Récupère 3 améliorations dans une partie.": {
+    "en": "Collect 3 upgrades in one game.",
+    "es": "Recoge 3 mejoras en una partida.",
+    "zh": "单局收集3次弹弓升级。"
+  },
+  "LES COPAINS À QUATRE PATTES": {
+    "en": "FOUR-LEGGED FRIENDS",
+    "es": "AMIGOS DE CUATRO PATAS",
+    "zh": "四条腿的朋友"
+  },
+  "Utilise une fois le bonus des chiens.": {
+    "en": "Use the dog bonus once.",
+    "es": "Usa una vez el bonus de los perros.",
+    "zh": "使用一次狗群奖励。"
+  },
+  "ON PARLE DE TOI": {
+    "en": "TALK OF THE TOWN",
+    "es": "TODOS HABLAN DE TI",
+    "zh": "全村都在谈论你"
+  },
+  "Atteins 10 000 points dans une partie.": {
+    "en": "Reach 10,000 points in one game.",
+    "es": "Alcanza 10.000 puntos en una partida.",
+    "zh": "单局达到10000分。"
+  },
+  "TOUT LE VILLAGE AUX TROUSSES": {
+    "en": "THE WHOLE VILLAGE IS AFTER YOU",
+    "es": "TODO EL PUEBLO TE PERSIGUE",
+    "zh": "全村追击"
+  },
+  "Sème 100 adultes, sur plusieurs parties.": {
+    "en": "Outrun 100 adults across several games.",
+    "es": "Deja atrás a 100 adultos entre varias partidas.",
+    "zh": "累计击败100名大人。"
+  },
+  "INSAISISSABLE": {
+    "en": "ELUSIVE",
+    "es": "ESCURRIDIZO",
+    "zh": "身手不凡"
+  },
+  "Tiens 45 secondes sans perdre de vie.": {
+    "en": "Last 45 seconds without losing health.",
+    "es": "Aguanta 45 segundos sin perder vida.",
+    "zh": "连续45秒不损失生命值。"
+  },
+  "CHEF DE MEUTE": {
+    "en": "PACK LEADER",
+    "es": "JEFE DE LA MANADA",
+    "zh": "狗群领袖"
+  },
+  "Utilise les chiens 3 fois au total.": {
+    "en": "Use the dogs 3 times in total.",
+    "es": "Usa los perros 3 veces en total.",
+    "zh": "累计使用3次狗群奖励。"
+  },
+  "AS DU LANCE-PIERRE": {
+    "en": "SLINGSHOT ACE",
+    "es": "AS DEL TIRACHINAS",
+    "zh": "弹弓高手"
+  },
+  "Récupère les 6 améliorations dans une partie.": {
+    "en": "Collect all 6 upgrades in one game.",
+    "es": "Recoge las 6 mejoras en una partida.",
+    "zh": "单局收集全部6次弹弓升级。"
+  },
+  "LA LÉGENDE EST EN MARCHE": {
+    "en": "A LEGEND IN THE MAKING",
+    "es": "NACE UNA LEYENDA",
+    "zh": "传奇起步"
+  },
+  "Atteins 25 000 points dans une partie.": {
+    "en": "Reach 25,000 points in one game.",
+    "es": "Alcanza 25.000 puntos en una partida.",
+    "zh": "单局达到25000分。"
+  },
+  "PETIT FARCEUR": {
+    "en": "LITTLE PRANKSTER",
+    "es": "PEQUEÑO BROMISTA",
+    "zh": "小小淘气包"
+  },
+  "CANCRE DU QUARTIER": {
+    "en": "NEIGHBOURHOOD RASCAL",
+    "es": "TRAVIESO DEL BARRIO",
+    "zh": "街区小捣蛋"
+  },
+  "TERREUR DU VILLAGE": {
+    "en": "TERROR OF THE VILLAGE",
+    "es": "TERROR DEL PUEBLO",
+    "zh": "全村小霸王"
+  },
+  "CHENAPAN LÉGENDAIRE": {
+    "en": "LEGENDARY RASCAL",
+    "es": "PÍCARO LEGENDARIO",
+    "zh": "传奇淘气包"
+  },
+  "TENUE DU CANAL": {
+    "en": "CANAL OUTFIT",
+    "es": "TRAJE DEL CANAL",
+    "zh": "运河套装"
+  },
+  "CARTABLE ROUGE": {
+    "en": "RED SCHOOLBAG",
+    "es": "MOCHILA ROJA",
+    "zh": "红色书包"
+  },
+  "RUBAN BLEU": {
+    "en": "BLUE RIBBON",
+    "es": "CINTA AZUL",
+    "zh": "蓝色缎带"
+  },
+  "TENUE DU FARCEUR": {
+    "en": "PRANKSTER OUTFIT",
+    "es": "TRAJE DEL BROMISTA",
+    "zh": "淘气包套装"
+  },
+  "CARTABLE BLEU": {
+    "en": "BLUE SCHOOLBAG",
+    "es": "MOCHILA AZUL",
+    "zh": "蓝色书包"
+  },
+  "RUBAN DORÉ": {
+    "en": "GOLD RIBBON",
+    "es": "CINTA DORADA",
+    "zh": "金色缎带"
+  },
+  "LE CARNET DE BÊTISES": {
+    "en": "THE MISCHIEF BOOK",
+    "es": "EL CUADERNO DE TRAVESURAS",
+    "zh": "恶作剧手册"
+  },
+  "%d / 12 défis relevés": {
+    "en": "%d / 12 challenges completed",
+    "es": "%d / 12 retos completados",
+    "zh": "已完成 %d / 12 项挑战"
+  },
+  "Ta progression reste après chaque partie.": {
+    "en": "Your progress is saved after each game.",
+    "es": "Tu progreso se guarda tras cada partida.",
+    "zh": "每局结束后保留进度。"
+  },
+  "Aucun bonus de puissance à débloquer.": {
+    "en": "Unlocks are cosmetic, with no power boost.",
+    "es": "Las recompensas no aumentan tu poder.",
+    "zh": "解锁奖励只改变外观，不增加战力。"
+  },
+  "DÉFIS": {
+    "en": "CHALLENGES",
+    "es": "RETOS",
+    "zh": "挑战"
+  },
+  "VESTIAIRE": {
+    "en": "WARDROBE",
+    "es": "VESTUARIO",
+    "zh": "衣橱"
+  },
+  "PALMARÈS": {
+    "en": "ACHIEVEMENTS",
+    "es": "LOGROS",
+    "zh": "成就"
+  },
+  "Sauvegarde indisponible sur cet appareil.": {
+    "en": "Saving is unavailable on this device.",
+    "es": "No se puede guardar en este dispositivo.",
+    "zh": "此设备暂时无法保存。"
+  },
+  "LE VILLAGE SE SOUVIENDRA DE TOI !": {
+    "en": "THE VILLAGE WILL REMEMBER YOU!",
+    "es": "¡EL PUEBLO TE RECORDARÁ!",
+    "zh": "全村都会记住你！"
+  },
+  "Les 12 défis sont relevés. À toi les records !": {
+    "en": "All 12 challenges done. Chase your record!",
+    "es": "¡12 retos superados! Ahora, bate tu récord.",
+    "zh": "12项挑战全部完成，再创纪录吧！"
+  },
+  "DÉFI RELEVÉ !": {
+    "en": "CHALLENGE COMPLETE!",
+    "es": "¡RETO COMPLETADO!",
+    "zh": "挑战完成！"
+  },
+  "Progression : %d / %d": {
+    "en": "Progress: %d / %d",
+    "es": "Progreso: %d / %d",
+    "zh": "进度：%d / %d"
+  },
+  "Une seule partie": {
+    "en": "One game",
+    "es": "Una sola partida",
+    "zh": "单局挑战"
+  },
+  "Cumul sur plusieurs parties": {
+    "en": "Across several games",
+    "es": "Entre varias partidas",
+    "zh": "多局累计"
+  },
+  "Les prochains défis arrivent à la partie suivante.": {
+    "en": "New challenges arrive with the next game.",
+    "es": "Los nuevos retos llegan en la próxima partida.",
+    "zh": "下一局开始时出现新挑战。"
+  },
+  "Aucune obligation de jouer chaque jour.": {
+    "en": "No need to play every day.",
+    "es": "No hace falta jugar todos los días.",
+    "zh": "无需每天游玩。"
+  },
+  "Choisis un accessoire débloqué pour l'équiper.": {
+    "en": "Tap an unlocked item to equip it.",
+    "es": "Toca un accesorio desbloqueado para equiparlo.",
+    "zh": "点击已解锁的外观即可装备。"
+  },
+  "ÉQUIPÉ · toucher pour retirer": {
+    "en": "EQUIPPED · tap to remove",
+    "es": "EQUIPADO · toca para quitar",
+    "zh": "已装备 · 点击卸下"
+  },
+  "TOUCHER POUR ÉQUIPER": {
+    "en": "TAP TO EQUIP",
+    "es": "TOCA PARA EQUIPAR",
+    "zh": "点击装备"
+  },
+  "Débloqué après %d défis": {
+    "en": "Unlocks after %d challenges",
+    "es": "Se desbloquea tras %d retos",
+    "zh": "完成 %d 项挑战后解锁"
+  },
+  "Les rubans ne changent pas le rang du lance-pierre.": {
+    "en": "Ribbons do not change your slingshot rank.",
+    "es": "Las cintas no cambian el nivel del tirachinas.",
+    "zh": "缎带不会改变弹弓等级。"
+  },
+  "%d défis relevés": {
+    "en": "%d challenges completed",
+    "es": "%d retos completados",
+    "zh": "完成 %d 项挑战"
+  },
+  "Record : %d points": {
+    "en": "Best: %d points",
+    "es": "Récord: %d puntos",
+    "zh": "最高纪录：%d 分"
+  },
+  "Parties terminées : %d": {
+    "en": "Games finished: %d",
+    "es": "Partidas terminadas: %d",
+    "zh": "已结束对局：%d"
+  },
+  "Défis relevés : %d / 12": {
+    "en": "Challenges completed: %d / 12",
+    "es": "Retos completados: %d / 12",
+    "zh": "挑战完成：%d / 12"
+  },
+  "Le prochain objectif : ton propre record.": {
+    "en": "Next goal: beat your own best.",
+    "es": "Siguiente objetivo: superar tu récord.",
+    "zh": "下个目标：打破自己的纪录。"
+  },
+  "CETTE PARTIE A FAIT AVANCER TON CARNET": {
+    "en": "YOUR NOTEBOOK AFTER THIS GAME",
+    "es": "TU CUADERNO TRAS ESTA PARTIDA",
+    "zh": "本局手册进度"
+  },
+  "Encore %d défi(s) : %s": {
+    "en": "%d more challenge(s): %s",
+    "es": "%d reto(s) más: %s",
+    "zh": "再完成 %d 项挑战：%s"
+  },
+  "Tout le vestiaire est débloqué !": {
+    "en": "Every outfit and accessory unlocked!",
+    "es": "¡Todo el vestuario desbloqueado!",
+    "zh": "全部外观已解锁！"
+  },
+  "REJOUER": {
+    "en": "PLAY AGAIN",
+    "es": "VOLVER A JUGAR",
+    "zh": "再玩一次"
+  },
+  "MON CARNET": {
+    "en": "MY NOTEBOOK",
+    "es": "MI CUADERNO",
+    "zh": "我的手册"
+  },
+  "PARTAGER": {
+    "en": "SHARE",
+    "es": "COMPARTIR",
+    "zh": "分享"
+  },
+  "INTRO + PARTIE": {
+    "en": "INTRO + PLAY",
+    "es": "INTRO + JUGAR",
+    "zh": "观看开场并开始"
+  },
+  "Le village n'a pas dit son dernier mot.": {
+    "en": "The village isn't done with you yet.",
+    "es": "El pueblo no ha dicho su última palabra.",
+    "zh": "村民们还没认输。"
+  },
+  "Le boulanger t'a rattrapé !": {
+    "en": "The baker caught you!",
+    "es": "¡Te atrapó el panadero!",
+    "zh": "面包师抓住你了！"
+  },
+  "L'école t'a rattrapé !": {
+    "en": "The school caught you!",
+    "es": "¡Te atraparon los profes!",
+    "zh": "老师抓住你了！"
+  },
+  "La poste t'a rattrapé !": {
+    "en": "The post office caught you!",
+    "es": "¡Te atrapó el cartero!",
+    "zh": "邮递员抓住你了！"
+  },
+  "La police t'a rattrapé !": {
+    "en": "The police caught you!",
+    "es": "¡Te atrapó la policía!",
+    "zh": "警察抓住你了！"
+  },
+  "Les pompiers t'ont rattrapé !": {
+    "en": "The firefighters caught you!",
+    "es": "¡Te atraparon los bomberos!",
+    "zh": "消防员抓住你了！"
+  },
+  "Le bistrot t'a rattrapé !": {
+    "en": "The café caught you!",
+    "es": "¡Te atraparon los del café!",
+    "zh": "咖啡馆的客人抓住你了！"
+  },
+  "Le restaurant t'a rattrapé !": {
+    "en": "The restaurant caught you!",
+    "es": "¡Te atraparon los del restaurante!",
+    "zh": "餐馆的人抓住你了！"
+  },
+  "Le boucher t'a rattrapé !": {
+    "en": "The butcher caught you!",
+    "es": "¡Te atrapó el carnicero!",
+    "zh": "肉铺老板抓住你了！"
+  },
+  "La paroisse t'a rattrapé !": {
+    "en": "The parish caught you!",
+    "es": "¡Te atraparon los de la iglesia!",
+    "zh": "教堂的人抓住你了！"
+  },
+  "Le village t'a rattrapé !": {
+    "en": "The village caught you!",
+    "es": "¡El pueblo te atrapó!",
+    "zh": "村民抓住你了！"
+  },
+  "Partage ouvert ou score copié.": {
+    "en": "Sharing opened or score copied.",
+    "es": "Se abrió el menú o se copió el resultado.",
+    "zh": "已打开分享或复制分数。"
+  },
+  "Choisis à qui partager ton score.": {
+    "en": "Choose who to share your score with.",
+    "es": "Elige con quién compartir tu resultado.",
+    "zh": "选择分享分数的对象。"
+  },
+  "Score copié : colle-le dans ton message.": {
+    "en": "Score copied: paste it into your message.",
+    "es": "Resultado copiado: pégalo en tu mensaje.",
+    "zh": "分数已复制，可粘贴到消息中。"
+  },
+  "TROIS DÉFIS À LA FOIS": {
+    "en": "THREE CHALLENGES AT A TIME",
+    "es": "TRES RETOS A LA VEZ",
+    "zh": "同时挑战三项"
+  },
+  "Le carnet propose 12 défis au total.": {
+    "en": "The notebook contains 12 challenges.",
+    "es": "El cuaderno tiene 12 retos en total.",
+    "zh": "手册共有12项挑战。"
+  },
+  "Les suivants arrivent au début d'une nouvelle partie.": {
+    "en": "New ones arrive when a new game starts.",
+    "es": "Los siguientes llegan al empezar otra partida.",
+    "zh": "下一局开始时出现新的挑战。"
+  },
+  "UNE PROGRESSION SAUVEGARDÉE": {
+    "en": "SAVED PROGRESS",
+    "es": "PROGRESO GUARDADO",
+    "zh": "保存进度"
+  },
+  "Certains défis se cumulent entre les parties.": {
+    "en": "Some challenges add up across games.",
+    "es": "Algunos retos se acumulan entre partidas.",
+    "zh": "部分挑战的进度可多局累计。"
+  },
+  "Les défis en une partie repartent de zéro au prochain départ.": {
+    "en": "Single-game challenges reset at the next start.",
+    "es": "Los retos de una partida se reinician al volver a jugar.",
+    "zh": "单局挑战在下一局开始时归零。"
+  },
+  "TA RÉPUTATION GRANDIT": {
+    "en": "YOUR REPUTATION GROWS",
+    "es": "TU REPUTACIÓN CRECE",
+    "zh": "声望不断增长"
+  },
+  "Un défi relevé compte pour ta réputation.": {
+    "en": "Each completed challenge builds your reputation.",
+    "es": "Cada reto completado aumenta tu reputación.",
+    "zh": "每项完成的挑战都会提高声望。"
+  },
+  "Les titres changent après 3, 6 et 12 défis.": {
+    "en": "Titles change after 3, 6 and 12 challenges.",
+    "es": "Los títulos cambian tras 3, 6 y 12 retos.",
+    "zh": "完成3、6、12项挑战后获得新称号。"
+  },
+  "TON VESTIAIRE": {
+    "en": "YOUR WARDROBE",
+    "es": "TU VESTUARIO",
+    "zh": "你的衣橱"
+  },
+  "Débloque des tenues, cartables et rubans.": {
+    "en": "Unlock outfits, schoolbags and ribbons.",
+    "es": "Desbloquea trajes, mochilas y cintas.",
+    "zh": "解锁服装、书包和缎带。"
+  },
+  "Choisis-les dans MON CARNET puis VESTIAIRE.": {
+    "en": "Choose them in MY NOTEBOOK, then WARDROBE.",
+    "es": "Elígelos en MI CUADERNO y luego VESTUARIO.",
+    "zh": "在我的手册中选择衣橱进行装备。"
+  },
+  "LE MÊME DÉFI POUR TOUS": {
+    "en": "THE SAME CHALLENGE FOR EVERYONE",
+    "es": "EL MISMO RETO PARA TODOS",
+    "zh": "公平挑战"
+  },
+  "Les accessoires ne changent ni les dégâts ni la cadence.": {
+    "en": "Accessories change neither damage nor fire rate.",
+    "es": "Los accesorios no cambian el daño ni la cadencia.",
+    "zh": "外观不会改变伤害或射击速度。"
+  },
+  "La couleur de rang du lance-pierre reste visible.": {
+    "en": "The slingshot's rank colour stays visible.",
+    "es": "El color del nivel del tirachinas sigue visible.",
+    "zh": "弹弓等级的颜色始终可见。"
+  },
+  "REJOUER ET PARTAGER": {
+    "en": "REPLAY AND SHARE",
+    "es": "REJUGAR Y COMPARTIR",
+    "zh": "重玩与分享"
+  },
+  "REJOUER relance directement une nouvelle partie.": {
+    "en": "PLAY AGAIN starts a new game straight away.",
+    "es": "VOLVER A JUGAR inicia otra partida al instante.",
+    "zh": "点击再玩一次即可直接开始新一局。"
+  },
+  "PARTAGER ouvre le partage de ton résultat.": {
+    "en": "SHARE opens sharing for your result.",
+    "es": "COMPARTIR abre el menú para enviar tu resultado.",
+    "zh": "点击分享即可分享本局结果。"
+  },
+  "Carte partagée !": {
+    "en": "Card shared!",
+    "es": "¡Tarjeta compartida!",
+    "zh": "成绩卡已分享！"
+  },
+  "Carte téléchargée : envoie-la à tes amis.": {
+    "en": "Card downloaded: send it to your friends.",
+    "es": "Tarjeta descargada: envíasela a tus amigos.",
+    "zh": "成绩卡已下载，可以发给朋友。"
+  },
+  "Partage annulé.": {
+    "en": "Sharing cancelled.",
+    "es": "Se canceló el envío.",
+    "zh": "已取消分享。"
+  },
+  "Partage indisponible. Réessaie dans Safari ou Chrome.": {
+    "en": "Sharing unavailable. Try Safari or Chrome.",
+    "es": "No se puede compartir. Prueba Safari o Chrome.",
+    "zh": "暂时无法分享，请使用Safari或Chrome。"
+  },
+  "LA TERREUR DU QUARTIER": {
+    "en": "NEIGHBOURHOOD MENACE",
+    "es": "EL TERROR DEL BARRIO",
+    "zh": "街区小霸王"
+  },
+  "ATTRAPE-MOI SI TU PEUX": {
+    "en": "CATCH ME IF YOU CAN",
+    "es": "ATRÁPAME SI PUEDES",
+    "zh": "有本事来抓我"
+  },
+  "LES POCHES PLEINES": {
+    "en": "FULL POCKETS",
+    "es": "BOLSILLOS LLENOS",
+    "zh": "口袋满满"
+  },
+  "TOUT LE VILLAGE Y PASSE": {
+    "en": "THE WHOLE VILLAGE",
+    "es": "TODO EL PUEBLO",
+    "zh": "全村都来了"
+  },
+  "LA GRANDE RÉCOLTE": {
+    "en": "THE BIG HAUL",
+    "es": "LA GRAN COSECHA",
+    "zh": "大丰收"
+  },
+  "LA MAUVAISE RÉPUTATION": {
+    "en": "A BAD REPUTATION",
+    "es": "MALA REPUTACIÓN",
+    "zh": "调皮出了名"
+  },
+  "LES MAINS EN OR": {
+    "en": "GOLDEN HANDS",
+    "es": "MANOS DE ORO",
+    "zh": "黄金巧手"
+  },
+  "LA LÉGENDE DU CHENAPAN": {
+    "en": "MISCHIEF LEGEND",
+    "es": "LA LEYENDA DEL TRAVIESO",
+    "zh": "淘气鬼传奇"
+  },
+  "Vaincs 50 assaillants, sur plusieurs parties.": {
+    "en": "Defeat 50 pursuers across multiple runs.",
+    "es": "Vence a 50 perseguidores en varias partidas.",
+    "zh": "在多局游戏中击败50名追赶者。"
+  },
+  "Tiens 40 secondes sans perdre de vie.": {
+    "en": "Last 40 seconds without losing health.",
+    "es": "Aguanta 40 segundos sin perder vida.",
+    "zh": "连续40秒不损失生命值。"
+  },
+  "Ramasse 20 cadeaux, sur plusieurs parties.": {
+    "en": "Collect 20 gifts across multiple runs.",
+    "es": "Recoge 20 regalos en varias partidas.",
+    "zh": "在多局游戏中收集20份礼物。"
+  },
+  "Utilise les chiens 3 fois, sur plusieurs parties.": {
+    "en": "Use the dogs 3 times across multiple runs.",
+    "es": "Usa los perros 3 veces en varias partidas.",
+    "zh": "在多局游戏中使用狗狗3次。"
+  },
+  "Vaincs 100 assaillants dans une seule partie.": {
+    "en": "Defeat 100 pursuers in one run.",
+    "es": "Vence a 100 perseguidores en una partida.",
+    "zh": "在一局中击败100名追赶者。"
+  },
+  "Utilise les chiens 5 fois, sur plusieurs parties.": {
+    "en": "Use the dogs 5 times across multiple runs.",
+    "es": "Usa los perros 5 veces en varias partidas.",
+    "zh": "在多局游戏中使用狗狗5次。"
+  },
+  "Ramasse 10 cadeaux dans une seule partie.": {
+    "en": "Collect 10 gifts in one run.",
+    "es": "Recoge 10 regalos en una partida.",
+    "zh": "在一局中收集10份礼物。"
+  },
+  "Atteins 50 000 points dans une seule partie.": {
+    "en": "Reach 50,000 points in one run.",
+    "es": "Alcanza 50 000 puntos en una partida.",
+    "zh": "在一局中达到50000分。"
+  },
+  "Récupère les 6 lance-pierres, jusqu'au doré.": {
+    "en": "Collect all 6 slingshot upgrades, up to gold.",
+    "es": "Recoge las 6 mejoras del tirachinas, hasta el dorado.",
+    "zh": "收集全部6次弹弓升级，直到金色。"
+  },
+  "Tiens 2 minutes sans perdre de vie.": {
+    "en": "Last 2 minutes without losing health.",
+    "es": "Aguanta 2 minutos sin perder vida.",
+    "zh": "连续2分钟不损失生命值。"
+  },
+  "Atteins 120 000 points dans une seule partie.": {
+    "en": "Reach 120,000 points in one run.",
+    "es": "Alcanza 120 000 puntos en una partida.",
+    "zh": "在一局中达到120000分。"
+  },
+  "DÉFI RELEVÉ ! +%d PIÈCES": {
+    "en": "CHALLENGE COMPLETE! +%d COINS",
+    "es": "¡RETO COMPLETADO! +%d MONEDAS",
+    "zh": "挑战完成！+%d金币"
+  },
+  "%d PIÈCES": {
+    "en": "%d COINS",
+    "es": "%d MONEDAS",
+    "zh": "%d金币"
+  },
+  "Des vêtements, aucun bonus de puissance.": {
+    "en": "Clothes only. No power bonuses.",
+    "es": "Solo ropa, sin mejoras de potencia.",
+    "zh": "仅改变外观，不提升战力。"
+  },
+  "DÉFI": {
+    "en": "CHALLENGE",
+    "es": "RETO",
+    "zh": "挑战"
+  },
+  "TENUE": {
+    "en": "OUTFIT",
+    "es": "ATUENDO",
+    "zh": "穿搭"
+  },
+  "BASKETS": {
+    "en": "SHOES",
+    "es": "ZAPATILLAS",
+    "zh": "鞋子"
+  },
+  "SHORTS": {
+    "en": "SHORTS",
+    "es": "PANTALONES",
+    "zh": "短裤"
+  },
+  "HAUTS": {
+    "en": "TOPS",
+    "es": "CAMISETAS",
+    "zh": "上衣"
+  },
+  "TÊTES": {
+    "en": "HATS",
+    "es": "GORROS",
+    "zh": "帽子"
+  },
+  "TENUES": {
+    "en": "COSTUMES",
+    "es": "DISFRACES",
+    "zh": "套装"
+  },
+  "RÉCOMPENSE : %d PIÈCES": {
+    "en": "REWARD: %d COINS",
+    "es": "PREMIO: %d MONEDAS",
+    "zh": "奖励：%d金币"
+  },
+  "Démarre une nouvelle partie pour ce défi.": {
+    "en": "Start a new run for this challenge.",
+    "es": "Empieza otra partida para este reto.",
+    "zh": "开始新的一局来完成此挑战。"
+  },
+  "Termine ce défi pour découvrir le suivant.": {
+    "en": "Complete this challenge to reveal the next.",
+    "es": "Completa este reto para descubrir el siguiente.",
+    "zh": "完成此挑战后解锁下一个。"
+  },
+  "Il reste actif aussi longtemps que nécessaire.": {
+    "en": "It stays active until you complete it.",
+    "es": "Sigue activo hasta que lo completes.",
+    "zh": "挑战一直保留，直到完成。"
+  },
+  "Les défis reviennent pour gagner d'autres pièces.": {
+    "en": "Challenges repeat so you can earn more coins.",
+    "es": "Los retos se repiten para ganar más monedas.",
+    "zh": "挑战会循环，让你继续赚取金币。"
+  },
+  "JOUER": {
+    "en": "PLAY",
+    "es": "JUGAR",
+    "zh": "开始游戏"
+  },
+  "ARTICLE POSSÉDÉ": {
+    "en": "OWNED ITEM",
+    "es": "ARTÍCULO ADQUIRIDO",
+    "zh": "已拥有"
+  },
+  "PROCHAIN ARTICLE": {
+    "en": "NEXT ITEM",
+    "es": "PRÓXIMO ARTÍCULO",
+    "zh": "下一件物品"
+  },
+  "CHOISIR DANS TENUE": {
+    "en": "OPEN OUTFIT",
+    "es": "ABRIR ATUENDO",
+    "zh": "前往穿搭"
+  },
+  "ACHETER": {
+    "en": "BUY",
+    "es": "COMPRAR",
+    "zh": "购买"
+  },
+  "Le prochain article apparaît après cet achat.": {
+    "en": "The next item appears after this purchase.",
+    "es": "El próximo artículo aparece tras esta compra.",
+    "zh": "购买后将显示下一件物品。"
+  },
+  "Il te manque %d pièces.": {
+    "en": "You need %d more coins.",
+    "es": "Te faltan %d monedas.",
+    "zh": "还差%d金币。"
+  },
+  "ESSAYAGE": {
+    "en": "TRY IT ON",
+    "es": "PROBADOR",
+    "zh": "试穿"
+  },
+  "TENUE D'ORIGINE": {
+    "en": "ORIGINAL OUTFIT",
+    "es": "ATUENDO ORIGINAL",
+    "zh": "初始装扮"
+  },
+  "Aperçu : confirme pour porter cet article.": {
+    "en": "Preview: confirm to wear this item.",
+    "es": "Vista previa: confirma para ponértelo.",
+    "zh": "预览：确认后才会穿戴。"
+  },
+  "ÉQUIPÉ": {
+    "en": "EQUIPPED",
+    "es": "EQUIPADO",
+    "zh": "已穿戴"
+  },
+  "ÉQUIPER": {
+    "en": "EQUIP",
+    "es": "EQUIPAR",
+    "zh": "穿戴"
+  },
+  "Équiper une pièce retire le costume complet.": {
+    "en": "Wearing a separate item removes the full costume.",
+    "es": "Una prenda suelta sustituye al disfraz completo.",
+    "zh": "穿戴单件服饰会脱下整套服装。"
+  },
+  "Défis réussis : %d": {
+    "en": "Challenges completed: %d",
+    "es": "Retos completados: %d",
+    "zh": "已完成挑战：%d"
+  },
+  "Pièces gagnées : %d": {
+    "en": "Coins earned: %d",
+    "es": "Monedas ganadas: %d",
+    "zh": "累计获得金币：%d"
+  },
+  "Articles possédés : %d / 84": {
+    "en": "Items owned: %d / 84",
+    "es": "Artículos adquiridos: %d / 84",
+    "zh": "已拥有物品：%d / 84"
+  },
+  "Anciens défis conservés : %d": {
+    "en": "Previous challenges kept: %d",
+    "es": "Retos anteriores conservados: %d",
+    "zh": "保留的旧挑战：%d"
+  },
+  "ACHAT EFFECTUÉ !": {
+    "en": "PURCHASE COMPLETE!",
+    "es": "¡COMPRA REALIZADA!",
+    "zh": "购买成功！"
+  },
+  "CONFIRMER L'ACHAT": {
+    "en": "CONFIRM PURCHASE",
+    "es": "CONFIRMAR COMPRA",
+    "zh": "确认购买"
+  },
+  "Veux-tu le porter maintenant ?": {
+    "en": "Wear it now?",
+    "es": "¿Quieres ponértelo ahora?",
+    "zh": "现在穿上吗？"
+  },
+  "Acheter pour %d pièces ?": {
+    "en": "Buy for %d coins?",
+    "es": "¿Comprar por %d monedas?",
+    "zh": "花%d金币购买？"
+  },
+  "PLUS TARD": {
+    "en": "LATER",
+    "es": "MÁS TARDE",
+    "zh": "稍后"
+  },
+  "ANNULER": {
+    "en": "CANCEL",
+    "es": "CANCELAR",
+    "zh": "取消"
+  },
+  "Achat enregistré.": {
+    "en": "Purchase saved.",
+    "es": "Compra guardada.",
+    "zh": "购买已保存。"
+  },
+  "Achat impossible. Vérifie tes pièces.": {
+    "en": "Cannot buy. Check your coins.",
+    "es": "No se puede comprar. Revisa tus monedas.",
+    "zh": "无法购买，请检查金币。"
+  },
+  "%d assaillants vaincus · %d cadeaux": {
+    "en": "%d pursuers defeated · %d gifts",
+    "es": "%d perseguidores vencidos · %d regalos",
+    "zh": "击败%d名追赶者 · %d份礼物"
+  },
+  "Cette partie : +%d pièces": {
+    "en": "This run: +%d coins",
+    "es": "Esta partida: +%d monedas",
+    "zh": "本局：+%d金币"
+  },
+  "DÉFI EN COURS": {
+    "en": "CURRENT CHALLENGE",
+    "es": "RETO ACTUAL",
+    "zh": "当前挑战"
+  },
+  "Tes pièces et tes achats sont sauvegardés.": {
+    "en": "Your coins and purchases are saved.",
+    "es": "Tus monedas y compras están guardadas.",
+    "zh": "金币和购买记录已保存。"
+  },
+  "UN DÉFI À LA FOIS": {
+    "en": "ONE CHALLENGE AT A TIME",
+    "es": "UN RETO A LA VEZ",
+    "zh": "每次一个挑战"
+  },
+  "Termine le défi actif pour découvrir le suivant.": {
+    "en": "Complete the current challenge to reveal the next.",
+    "es": "Completa el reto actual para ver el siguiente.",
+    "zh": "完成当前挑战后解锁下一个。"
+  },
+  "Le défi reste jusqu'à sa réussite, sans limite de temps.": {
+    "en": "It stays until completed, with no time limit.",
+    "es": "Se mantiene hasta completarlo, sin límite de tiempo.",
+    "zh": "挑战一直保留到完成，没有时间限制。"
+  },
+  "Les titres changent après 3, 6 et 11 défis.": {
+    "en": "Titles change after 3, 6 and 11 challenges.",
+    "es": "Los títulos cambian tras 3, 6 y 11 retos.",
+    "zh": "完成3、6和11个挑战后升级称号。"
+  },
+  "DES PIÈCES POUR TON VESTIAIRE": {
+    "en": "COINS FOR YOUR WARDROBE",
+    "es": "MONEDAS PARA TU ARMARIO",
+    "zh": "用金币购买服饰"
+  },
+  "Un défi rapporte 100 ou 200 pièces. La série recommence.": {
+    "en": "Earn 100 or 200 coins per challenge. The series repeats.",
+    "es": "Gana 100 o 200 monedas por reto. La serie se repite.",
+    "zh": "每个挑战获得100或200金币，系列会循环。"
+  },
+  "Achète les articles un par un dans chaque catégorie.": {
+    "en": "Buy items one by one in each category.",
+    "es": "Compra los artículos uno a uno en cada categoría.",
+    "zh": "在各分类中逐一购买物品。"
+  },
+  "HABILLE TON HÉROS": {
+    "en": "DRESS YOUR HERO",
+    "es": "VISTE A TU HÉROE",
+    "zh": "装扮你的英雄"
+  },
+  "Dans TENUE, essaie puis équipe tes achats.": {
+    "en": "Try on and equip your purchases in OUTFIT.",
+    "es": "Prueba y equipa tus compras en ATUENDO.",
+    "zh": "在穿搭中试穿并装备已购物品。"
+  },
+  "Les vêtements ne changent ni les dégâts ni la cadence.": {
+    "en": "Clothes change neither damage nor fire rate.",
+    "es": "La ropa no cambia el daño ni la cadencia.",
+    "zh": "服饰不会改变伤害或射速。"
+  },
+  "Tomate turbo": {
+    "en": "Tomato Turbo",
+    "es": "Tomate turbo",
+    "zh": "番茄飞驰"
+  },
+  "Cornichon express": {
+    "en": "Pickle Express",
+    "es": "Pepinillo exprés",
+    "zh": "酸黄瓜快车"
+  },
+  "Baguettes de course": {
+    "en": "Running Baguettes",
+    "es": "Baguettes veloces",
+    "zh": "疾跑法棍"
+  },
+  "Camembert volant": {
+    "en": "Flying Camembert",
+    "es": "Camembert volador",
+    "zh": "飞天奶酪"
+  },
+  "Sardines sportives": {
+    "en": "Sporty Sardines",
+    "es": "Sardinas deportivas",
+    "zh": "运动沙丁鱼"
+  },
+  "Grenouilles bondissantes": {
+    "en": "Leaping Frogs",
+    "es": "Ranas saltarinas",
+    "zh": "跳跃青蛙"
+  },
+  "Abeilles pressées": {
+    "en": "Busy Bees",
+    "es": "Abejas veloces",
+    "zh": "忙碌蜜蜂"
+  },
+  "Coccinelles rapides": {
+    "en": "Speedy Ladybirds",
+    "es": "Mariquitas rápidas",
+    "zh": "疾速瓢虫"
+  },
+  "Disco du village": {
+    "en": "Village Disco",
+    "es": "Disco del pueblo",
+    "zh": "村庄迪斯科"
+  },
+  "Éclairs du préau": {
+    "en": "Playground Lightning",
+    "es": "Rayos del patio",
+    "zh": "操场闪电"
+  },
+  "Fusées de poche": {
+    "en": "Pocket Rockets",
+    "es": "Cohetes de bolsillo",
+    "zh": "口袋火箭"
+  },
+  "Patates de compétition": {
+    "en": "Racing Potatoes",
+    "es": "Patatas de competición",
+    "zh": "竞速土豆"
+  },
+  "Pastèques roulantes": {
+    "en": "Rolling Watermelons",
+    "es": "Sandías rodantes",
+    "zh": "滚动西瓜"
+  },
+  "Bonbons rebelles": {
+    "en": "Rebel Sweets",
+    "es": "Caramelos rebeldes",
+    "zh": "叛逆糖果"
+  },
+  "Échiquier express": {
+    "en": "Checkerboard Express",
+    "es": "Ajedrez exprés",
+    "zh": "棋盘快车"
+  },
+  "Pirates du trottoir": {
+    "en": "Pavement Pirates",
+    "es": "Piratas de la acera",
+    "zh": "人行道海盗"
+  },
+  "Canards déchaînés": {
+    "en": "Wild Ducks",
+    "es": "Patos desatados",
+    "zh": "疯狂鸭子"
+  },
+  "Renard furtif": {
+    "en": "Sneaky Fox",
+    "es": "Zorro sigiloso",
+    "zh": "潜行狐狸"
+  },
+  "Nuages aux pieds": {
+    "en": "Cloud Feet",
+    "es": "Nubes en los pies",
+    "zh": "脚踏云朵"
+  },
+  "Trophées ambulants": {
+    "en": "Walking Trophies",
+    "es": "Trofeos andantes",
+    "zh": "行走奖杯"
+  },
+  "Carreau de cuisine": {
+    "en": "Kitchen Checks",
+    "es": "Cuadros de cocina",
+    "zh": "厨房格纹"
+  },
+  "Cornichon chic": {
+    "en": "Chic Pickles",
+    "es": "Pepinillo elegante",
+    "zh": "时髦酸黄瓜"
+  },
+  "Canard en vadrouille": {
+    "en": "Wandering Duck",
+    "es": "Pato de paseo",
+    "zh": "闲逛鸭子"
+  },
+  "Bal du samedi": {
+    "en": "Saturday Dance",
+    "es": "Baile del sábado",
+    "zh": "周六舞会"
+  },
+  "Sardines en vacances": {
+    "en": "Sardines on Holiday",
+    "es": "Sardinas de vacaciones",
+    "zh": "度假沙丁鱼"
+  },
+  "Nénuphar": {
+    "en": "Water Lily",
+    "es": "Nenúfar",
+    "zh": "睡莲"
+  },
+  "Rayures de guêpe": {
+    "en": "Wasp Stripes",
+    "es": "Rayas de avispa",
+    "zh": "黄蜂条纹"
+  },
+  "Coccinelle géante": {
+    "en": "Giant Ladybird",
+    "es": "Mariquita gigante",
+    "zh": "巨型瓢虫"
+  },
+  "Ciel de récré": {
+    "en": "Playground Sky",
+    "es": "Cielo del recreo",
+    "zh": "操场天空"
+  },
+  "Éclair violet": {
+    "en": "Purple Lightning",
+    "es": "Rayo violeta",
+    "zh": "紫色闪电"
+  },
+  "Nuit étoilée": {
+    "en": "Starry Night",
+    "es": "Noche estrellada",
+    "zh": "繁星之夜"
+  },
+  "Sac à patates": {
+    "en": "Potato Sack",
+    "es": "Saco de patatas",
+    "zh": "土豆麻袋"
+  },
+  "Pastèque fraîche": {
+    "en": "Fresh Watermelon",
+    "es": "Sandía fresca",
+    "zh": "清甜西瓜"
+  },
+  "Berlingot": {
+    "en": "Striped Sweet",
+    "es": "Caramelo de rayas",
+    "zh": "彩条糖果"
+  },
+  "Échec au prof": {
+    "en": "Checkmate Teacher",
+    "es": "Jaque al profe",
+    "zh": "将军老师"
+  },
+  "Corsaire du caniveau": {
+    "en": "Gutter Corsair",
+    "es": "Corsario del bordillo",
+    "zh": "路边海盗"
+  },
+  "Queue de renard": {
+    "en": "Fox Tail",
+    "es": "Cola de zorro",
+    "zh": "狐狸尾巴"
+  },
+  "Baguette sous le bras": {
+    "en": "Baguette Buddy",
+    "es": "Baguette bajo el brazo",
+    "zh": "法棍好伙伴"
+  },
+  "Camembert royal": {
+    "en": "Royal Camembert",
+    "es": "Camembert real",
+    "zh": "皇家奶酪"
+  },
+  "Champion du village": {
+    "en": "Village Champion",
+    "es": "Campeón del pueblo",
+    "zh": "村庄冠军"
+  },
+  "Œuf au plat": {
+    "en": "Fried Egg",
+    "es": "Huevo frito",
+    "zh": "煎蛋"
+  },
+  "Sardine superstar": {
+    "en": "Superstar Sardine",
+    "es": "Sardina superestrella",
+    "zh": "明星沙丁鱼"
+  },
+  "Coin-coin la police": {
+    "en": "Quack Police",
+    "es": "Policía cuac-cuac",
+    "zh": "嘎嘎警察"
+  },
+  "Vedette du bistrot": {
+    "en": "Bistro Star",
+    "es": "Estrella del bar",
+    "zh": "酒馆明星"
+  },
+  "Cornichon champion": {
+    "en": "Champion Pickle",
+    "es": "Pepinillo campeón",
+    "zh": "酸黄瓜冠军"
+  },
+  "Grenouille de compétition": {
+    "en": "Athletic Frog",
+    "es": "Rana de competición",
+    "zh": "健美青蛙"
+  },
+  "Abeille pas sage": {
+    "en": "Naughty Bee",
+    "es": "Abeja traviesa",
+    "zh": "淘气蜜蜂"
+  },
+  "Attention chenapan": {
+    "en": "Mischief Ahead",
+    "es": "Cuidado, travieso",
+    "zh": "当心淘气鬼"
+  },
+  "Orage de bêtises": {
+    "en": "Mischief Storm",
+    "es": "Tormenta de travesuras",
+    "zh": "捣蛋风暴"
+  },
+  "Super Cancre": {
+    "en": "Super Dunce",
+    "es": "Super Zoquete",
+    "zh": "超级小笨蛋"
+  },
+  "Fusée de la récré": {
+    "en": "Playground Rocket",
+    "es": "Cohete del recreo",
+    "zh": "操场火箭"
+  },
+  "Patate de champion": {
+    "en": "Champion Potato",
+    "es": "Patata campeona",
+    "zh": "土豆冠军"
+  },
+  "Melon melon": {
+    "en": "Melon in a Bowler",
+    "es": "Melón con bombín",
+    "zh": "戴礼帽的甜瓜"
+  },
+  "Bonbon explosif": {
+    "en": "Explosive Sweet",
+    "es": "Caramelo explosivo",
+    "zh": "爆炸糖果"
+  },
+  "Roi des bêtises": {
+    "en": "King of Mischief",
+    "es": "Rey de las travesuras",
+    "zh": "捣蛋大王"
+  },
+  "Pirate du goûter": {
+    "en": "Snack Pirate",
+    "es": "Pirata de la merienda",
+    "zh": "点心海盗"
+  },
+  "Renard filou": {
+    "en": "Cheeky Fox",
+    "es": "Zorro pillo",
+    "zh": "狡黠狐狸"
+  },
+  "Baguette magique": {
+    "en": "Magic Baguette",
+    "es": "Baguette mágica",
+    "zh": "魔法法棍"
+  },
+  "Fromage ou rien": {
+    "en": "Cheese or Nothing",
+    "es": "Queso o nada",
+    "zh": "非奶酪不可"
+  },
+  "Chenapan numéro un": {
+    "en": "Number One Rascal",
+    "es": "Travieso número uno",
+    "zh": "头号淘气鬼"
+  },
+  "La passoire du chef": {
+    "en": "Chef's Colander",
+    "es": "El colador del chef",
+    "zh": "大厨漏勺"
+  },
+  "Le roi du goûter": {
+    "en": "Snack King",
+    "es": "El rey de la merienda",
+    "zh": "点心国王"
+  },
+  "Le poisson pas frais": {
+    "en": "Fishy Hat",
+    "es": "El pez poco fresco",
+    "zh": "不太新鲜的鱼"
+  },
+  "Le potager ambulant": {
+    "en": "Walking Garden",
+    "es": "El huerto ambulante",
+    "zh": "行走菜园"
+  },
+  "La cocotte de récré": {
+    "en": "Playground Paper Hat",
+    "es": "El gorro de papel",
+    "zh": "课间纸帽"
+  },
+  "L’antenne à bêtises": {
+    "en": "Mischief Antenna",
+    "es": "La antena traviesa",
+    "zh": "捣蛋天线"
+  },
+  "La théière distinguée": {
+    "en": "Distinguished Teapot",
+    "es": "La tetera distinguida",
+    "zh": "优雅茶壶"
+  },
+  "Le bonnet du cancre": {
+    "en": "Dunce Hat",
+    "es": "El gorro de burro",
+    "zh": "小毛驴帽"
+  },
+  "Allez les Bleus": {
+    "en": "Allez les Bleus",
+    "es": "Allez les Bleus",
+    "zh": "法国队加油"
+  },
+  "Le grimpeur à pois": {
+    "en": "Polka-Dot Climber",
+    "es": "El escalador de lunares",
+    "zh": "圆点爬坡手"
+  },
+  "Le maillot jaune du village": {
+    "en": "Village Yellow Cap",
+    "es": "La gorra amarilla del pueblo",
+    "zh": "村庄黄帽"
+  },
+  "Le béret baguette": {
+    "en": "Baguette Beret",
+    "es": "La boina baguette",
+    "zh": "法棍贝雷帽"
+  },
+  "Le pigeon locataire": {
+    "en": "Resident Pigeon",
+    "es": "La paloma inquilina",
+    "zh": "鸽子房客"
+  },
+  "Le champignon suspect": {
+    "en": "Suspicious Mushroom",
+    "es": "El hongo sospechoso",
+    "zh": "可疑蘑菇"
+  },
+  "Raton du cambriolage": {
+    "en": "Burglar Raccoon",
+    "es": "Mapache ladrón",
+    "zh": "浣熊小盗"
+  },
+  "Coq du village": {
+    "en": "Village Rooster",
+    "es": "Gallo del pueblo",
+    "zh": "村庄公鸡"
+  },
+  "Grenouille royale": {
+    "en": "Royal Frog",
+    "es": "Rana real",
+    "zh": "皇家青蛙"
+  },
+  "Sardine en cavale": {
+    "en": "Runaway Sardine",
+    "es": "Sardina a la fuga",
+    "zh": "逃跑沙丁鱼"
+  },
+  "Épouvantail de récré": {
+    "en": "Playground Scarecrow",
+    "es": "Espantapájaros del recreo",
+    "zh": "操场稻草人"
+  },
+  "Chevalier de la casserole": {
+    "en": "Saucepan Knight",
+    "es": "Caballero de la cacerola",
+    "zh": "锅碗骑士"
+  },
+  "Baguette masquée": {
+    "en": "Masked Baguette",
+    "es": "Baguette enmascarada",
+    "zh": "蒙面法棍"
+  },
+  "Camembert justicier": {
+    "en": "Camembert Avenger",
+    "es": "Camembert justiciero",
+    "zh": "奶酪侠"
+  },
+  "Dragon du bistrot": {
+    "en": "Bistro Dragon",
+    "es": "Dragón del bar",
+    "zh": "酒馆小龙"
+  },
+  "CHOISIR DANS VESTIAIRE": {
+    "en": "CHOOSE IN WARDROBE",
+    "es": "ELEGIR EN VESTUARIO",
+    "zh": "前往衣橱选择"
+  },
+  "Dans VESTIAIRE, essaie puis équipe tes achats.": {
+    "en": "In WARDROBE, try on and equip your purchases.",
+    "es": "En VESTUARIO, prueba y equipa tus compras.",
+    "zh": "在衣橱中试穿并装备购买的物品。"
+  },
+  "ARTICLE MYSTÈRE": {
+    "en": "MYSTERY ITEM",
+    "es": "ARTÍCULO MISTERIOSO",
+    "zh": "神秘物品"
+  },
+  "VERROUILLÉ": {
+    "en": "LOCKED",
+    "es": "BLOQUEADO",
+    "zh": "未解锁"
+  },
+  "Achète l’article précédent pour le découvrir.": {
+    "en": "Buy the previous item to reveal this one.",
+    "es": "Compra el artículo anterior para descubrirlo.",
+    "zh": "购买前一件物品后即可揭晓。"
+  },
+  "TA TENUE ACTUELLE": {
+    "en": "YOUR CURRENT OUTFIT",
+    "es": "TU ATUENDO ACTUAL",
+    "zh": "当前装扮"
+  },
+  "Choisis parmi les articles que tu possèdes.": {
+    "en": "Choose from the items you own.",
+    "es": "Elige entre los artículos que tienes.",
+    "zh": "选择你已拥有的物品。"
+  },
+  "Aucun achat dans cette catégorie.": {
+    "en": "No purchases in this category yet.",
+    "es": "Aún no has comprado en esta categoría.",
+    "zh": "此类别中尚无已购物品。"
+  },
+  "PASSER CE DÉFI": {
+    "en": "SKIP CHALLENGE",
+    "es": "SALTAR DESAFÍO",
+    "zh": "跳过挑战"
+  },
+  "Termine ou passe ce défi pour découvrir le suivant.": {
+    "en": "Complete or skip this challenge to reveal the next.",
+    "es": "Completa o salta este desafío para descubrir el siguiente.",
+    "zh": "完成或跳过此挑战即可显示下一个。"
+  },
+  "Passer est gratuit et ne rapporte aucune pièce.": {
+    "en": "Skipping is free and awards no coins.",
+    "es": "Saltar es gratis y no otorga monedas.",
+    "zh": "跳过免费，但不获得金币。"
+  },
+  "VERSION TEST : TOUT EST DISPONIBLE": {
+    "en": "TEST BUILD: ALL ITEMS AVAILABLE",
+    "es": "VERSIÓN DE PRUEBA: TODO DISPONIBLE",
+    "zh": "测试版本：所有物品可用"
+  },
+  "ESSAYER": {
+    "en": "TRY ON",
+    "es": "PROBAR",
+    "zh": "试穿"
+  },
+  "FACE": {
+    "en": "FRONT",
+    "es": "FRENTE",
+    "zh": "正面"
+  },
+  "DOS": {
+    "en": "BACK",
+    "es": "ESPALDA",
+    "zh": "背面"
+  },
+  "SACS À DOS": {
+    "en": "BACKPACKS",
+    "es": "MOCHILAS",
+    "zh": "背包"
+  },
+  "Articles possédés : %d / %d": {
+    "en": "Items owned: %d / %d",
+    "es": "Artículos en propiedad: %d / %d",
+    "zh": "已拥有物品：%d / %d"
+  },
+  "Le sac passoire": {
+    "en": "Colander backpack",
+    "es": "Mochila colador",
+    "zh": "漏勺背包"
+  },
+  "Le sac du roi des biscuits": {
+    "en": "Biscuit king backpack",
+    "es": "Mochila del rey de las galletas",
+    "zh": "饼干国王背包"
+  },
+  "Le sac sardine": {
+    "en": "Sardine backpack",
+    "es": "Mochila sardina",
+    "zh": "沙丁鱼背包"
+  },
+  "Le sac potager": {
+    "en": "Flowerpot backpack",
+    "es": "Mochila maceta",
+    "zh": "花盆背包"
+  },
+  "Le sac en papier": {
+    "en": "Paper backpack",
+    "es": "Mochila de papel",
+    "zh": "纸背包"
+  },
+  "Le sac à antennes": {
+    "en": "Antenna backpack",
+    "es": "Mochila con antenas",
+    "zh": "天线背包"
+  },
+  "Le sac théière": {
+    "en": "Teapot backpack",
+    "es": "Mochila tetera",
+    "zh": "茶壶背包"
+  },
+  "Le sac du cancre": {
+    "en": "Donkey backpack",
+    "es": "Mochila de burro",
+    "zh": "小毛驴背包"
+  },
+  "Le sac Allez les Bleus": {
+    "en": "Allez les Bleus backpack",
+    "es": "Mochila Allez les Bleus",
+    "zh": "法国队加油背包"
+  },
+  "Le sac à pois du cycliste": {
+    "en": "Polka-dot cycling backpack",
+    "es": "Mochila ciclista de lunares",
+    "zh": "波点骑行背包"
+  },
+  "Le sac jaune du cycliste": {
+    "en": "Yellow cycling backpack",
+    "es": "Mochila ciclista amarilla",
+    "zh": "黄色骑行背包"
+  },
+  "Le sac baguette": {
+    "en": "Baguette backpack",
+    "es": "Mochila baguette",
+    "zh": "法棍背包"
+  },
+  "Le sac du pigeon": {
+    "en": "Pigeon backpack",
+    "es": "Mochila paloma",
+    "zh": "鸽子背包"
+  },
+  "Le sac champignon": {
+    "en": "Mushroom backpack",
+    "es": "Mochila seta",
+    "zh": "蘑菇背包"
+  },
+  "Relève des défis pour gagner des pièces.": {
+    "en": "Complete challenges to earn coins.",
+    "es": "Completa desafíos para ganar monedas.",
+    "zh": "完成挑战来赚取金币。"
+  },
+  "Achète tes vêtements dans l’ordre, par catégorie.": {
+    "en": "Buy clothes in order within each category.",
+    "es": "Compra la ropa en orden dentro de cada categoría.",
+    "zh": "按各类别的顺序购买服装。"
+  }
+}

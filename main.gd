@@ -11,8 +11,6 @@ const LANES = [-0.8, -0.4, 0.0, 0.4, 0.8]
 const NAMES = ["Baguettator", "Mme Brioche", "Lili Croissant", "Mme Dictée", "M. Craie", "Proviseur Tampon", "Facteur Express", "Mme Timbre", "Jo Colissimo"]
 const BUBBLE_LINES = ["Encore lui ?", "Attrapez-le !", "Petit garnement !", "Viens ici !", "Vauriens !", "Voyous !", "Petit bandit !", "Tu vas m’entendre !", "Gare à toi !", "Houste !", "Du balai !"]
 var special_slots: Array[String] = []
-var continues_used = 0
-var mock_action = ""
 var enemy_spawn_clock = 1.4
 var spawn_group_remainder = 0.0
 const SCENERY_SPEED = 0.12
@@ -92,7 +90,7 @@ var language = "fr"
 var language_selected = false
 var menu_translations: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://localization/menus.json"))
 var cjk_font: Font = preload("res://assets/ui_cjk.ttc")
-const UI_MODES = ["menu","help","privacy","pause","end","win","mock_ad","language","notebook"]
+const UI_MODES = ["menu","help","privacy","pause","end","win","language","notebook"]
 const LANGUAGE_CODES = ["fr","en","es","zh"]
 var drag_active = false
 var finger_target = 0.0
@@ -123,7 +121,6 @@ var movement_finger = -1
 var rng = RandomNumberGenerator.new()
 var stats = {"shots":0, "boxes":0, "damage":0, "spawned":0}
 var test_mode = false
-var ads: Node
 var privacy_return_mode = "menu"
 var intro: Node2D
 var notebook
@@ -144,9 +141,6 @@ func _ready():
 	street.g=self
 	street.z_index=-10
 	add_child(street)
-	ads = preload("res://monetization/ad_service.gd").new()
-	add_child(ads)
-	ads.reward_validated.connect(_on_ad_reward)
 	rng.randomize()
 	chatter_rng.randomize()
 	RenderingServer.set_default_clear_color(SKY)
@@ -192,8 +186,7 @@ func seed_village():
 func start_game():
 	if notebook!=null:notebook.begin_round()
 	last_dog_milestone=0;last_storm_milestone=0
-	special_slots.clear(); continues_used=0; enemy_spawn_clock=1.4; dogs_timer=0.0; spawn_group_remainder=0.0
-	ads.begin_round()
+	special_slots.clear(); enemy_spawn_clock=1.4; dogs_timer=0.0; spawn_group_remainder=0.0
 	mode = "play"
 	time = 0.0
 	scroll = 0.0
@@ -247,7 +240,6 @@ func _notification(what):
 	if what == NOTIFICATION_WM_GO_BACK_REQUEST or what == NOTIFICATION_WM_CLOSE_REQUEST:
 		if mode == "notebook": mode=notebook.book_return
 		elif mode == "cinematic": intro.skip()
-		elif mode == "mock_ad": close_mock_ad()
 		elif mode == "play": mode = "pause"
 		elif mode == "pause": mode = "menu"
 		elif mode == "privacy": mode = privacy_return_mode
@@ -261,7 +253,6 @@ func _unhandled_input(event):
 			elif mode == "language":
 				if language_selected: mode="menu"
 			elif mode == "cinematic": intro.skip()
-			elif mode == "mock_ad": close_mock_ad()
 			elif mode == "play": mode = "pause"
 			elif mode == "pause": mode = "play"
 			elif mode == "privacy": mode = privacy_return_mode
@@ -301,9 +292,6 @@ func handle_press(pos: Vector2, pointer_id: int = 0):
 	if mode=="cinematic":
 		if intro.SKIP_RECT.has_point(pos): intro.skip()
 		return
-	if mode == "mock_ad":
-		if Rect2(620,28,72,72).has_point(pos): close_mock_ad()
-		return
 	if mode == "menu":
 		if Rect2(70,790,580,82).has_point(pos): begin_intro()
 		elif Rect2(70,895,280,66).has_point(pos): notebook.open_book()
@@ -313,12 +301,7 @@ func handle_press(pos: Vector2, pointer_id: int = 0):
 		elif Rect2(70,1156,580,62).has_point(pos):open_privacy("menu")
 		return
 	if mode == "privacy":
-		if Rect2(100,575,520,65).has_point(pos): ads.set_age_group("minor")
-		elif Rect2(100,655,520,65).has_point(pos): ads.set_age_group("adult")
-		elif Rect2(100,735,520,65).has_point(pos): ads.set_age_group("unknown")
-		elif Rect2(100,870,520,65).has_point(pos): ads.opt_out()
-		elif Rect2(100,960,520,65).has_point(pos): ads.open_privacy_options()
-		elif Rect2(100,1100,520,70).has_point(pos): mode=privacy_return_mode
+		if Rect2(100,1100,520,70).has_point(pos): mode=privacy_return_mode
 		return
 	if mode == "help":
 		if Rect2(240,1150,240,70).has_point(pos): mode = "menu"
@@ -328,7 +311,7 @@ func handle_press(pos: Vector2, pointer_id: int = 0):
 	if mode == "pause":
 		if Rect2(125,565,470,76).has_point(pos): mode = "play"
 		elif Rect2(125,659,470,64).has_point(pos):
-			ads.abandon_round(); mode = "menu"
+			mode = "menu"
 		elif Rect2(125,742,470,60).has_point(pos): open_privacy("pause")
 		elif Rect2(125,818,470,60).has_point(pos):
 			if notebook.skip_task():mode="play"
@@ -639,7 +622,6 @@ func finish(won: bool):
 	save_progress()
 	if notebook!=null:notebook.end_round()
 	beep("start" if won else "hurt")
-	ads.finish_round()
 
 func save_progress():
 	var cfg=ConfigFile.new()
@@ -742,7 +724,7 @@ func draw_language():
 
 func atlas_sprite(index: int,feet: Vector2,height: float,tint=Color.WHITE,angle=0.0,gait=-1.0):
 	if notebook!=null and index in [0,1,11]:
-		notebook.renderer.draw_hero(index,feet,height,tint,angle)
+		notebook.renderer.draw_hero(index,feet,height,tint,angle,{},gait)
 		return
 	var texture=character_tex
 	var grid=Vector2(4,3)
@@ -780,7 +762,6 @@ func atlas_sprite(index: int,feet: Vector2,height: float,tint=Color.WHITE,angle=
 func _draw():
 	draw_village()
 	if mode=="cinematic":return
-	if mode=="mock_ad": draw_mock_ad();return
 	if mode=="language": draw_language();return
 	if mode=="menu": draw_menu();return
 	if mode=="notebook":notebook.draw_book();return
@@ -855,7 +836,7 @@ func draw_player():
 	draw_set_transform(Vector2.ZERO)
 	var tint=Color.WHITE
 	if invincible>0 and int(anim*12)%2==0:tint.a=0.35
-	atlas_sprite(0 if int(anim*6)%2==0 else 11,feet-Vector2(0,absf(sin(anim*12))*3+sin(jump_timer/0.65*PI)*100),164,tint,sin(anim*9)*0.025)
+	atlas_sprite(0 if int(anim*6)%2==0 else 11,feet-Vector2(0,absf(sin(anim*12))*3+sin(jump_timer/0.65*PI)*100),164,tint,sin(anim*9)*0.025,anim*12)
 	if sling_level>0:draw_slingshot(feet+Vector2(48,-80),36,sling_level)
 	# Equipment upgrades visibly attach to the yellow backpack.
 	if element>0:
@@ -978,7 +959,7 @@ func draw_menu():
 	centered("VILLAGE VS",106,54,INK,title_font)
 	centered("CHENAPAN",177,75,INK,title_font)
 	centered("Recherché pour excès de bêtises",225,22,TEAL)
-	centered("Village vs Chenapan · v1.24",1250,18,INK)
+	centered("Village vs Chenapan · v1.29",1250,18,INK)
 	atlas_sprite(2,Vector2(135,598),220,Color.WHITE,-0.10)
 	atlas_sprite(5,Vector2(580,588),220,Color.WHITE,0.08)
 	atlas_sprite(1,Vector2(360,654),310)
@@ -1000,7 +981,7 @@ const HELP_PAGES = [
 	["LES POINTS", "+10 points par seconde de survie.", "+100 points par assaillant vaincu."],
 	["LA VIE", "Un assaillant inflige 10 dégâts, une seule fois.", "Un assaillant qui sort en bas ne coûte pas de vie."],
 	["LES CADEAUX CLASSIQUES", "Un seul effet à la fois : le nouveau remplace l'ancien.", "Durée : 15 s, sauf cœur et piège, immédiats."],
-	["UNE NOUVELLE CHANCE", "Deux reprises maximum par partie, via une pub.", "Les points sont conservés lors d'une reprise."]]],
+	["LE CARNET DE BÊTISES", "Relève des défis pour gagner des pièces.", "Achète tes vêtements dans l’ordre, par catégorie."]]],
 	["TOUS LES BONUS", [
 	["DOUBLE GALETS", "2 galets par salve pendant 15 secondes.", ""],
 	["TRIPLE GALETS", "3 galets par salve pendant 15 secondes.", ""],
@@ -1076,35 +1057,12 @@ func open_privacy(return_mode: String):
 	privacy_return_mode=return_mode
 	mode="privacy"
 
-func _on_ad_reward(reward: String):
-	# Dormant in phase 1. Native provider alone can validate this callback.
-	if reward=="revive_once" and mode=="end":
-		life=20
-		invincible=3.0
-		mode="play"
-		ads.in_round=true
-		say("Une seconde chance : 1 cœur !",2.5)
-
 func draw_privacy():
 	draw_rect(Rect2(0,0,720,1280),PAPER)
 	centered("CONFIDENTIALITÉ",95,34,INK,title_font)
-	centered("Tu peux jouer sans rien renseigner.",145,20,TEAL)
-	var lines=["Cette version ne contient aucun SDK publicitaire.","Aucune publicité, aucun suivi et aucun compte.","Le record et les réglages restent sur ton appareil.","Aucune date de naissance n'est demandée."]
-	for i in range(lines.size()):centered(lines[i],220+i*38,19,INK)
-	rounded(Rect2(65,380,590,135),Color("e1eee5"),18)
-	centered("Catégorie facultative, conservée localement",421,19,INK)
-	var profile={"unknown":"Non renseignée","minor":"Moins de 18 ans","adult":"18 ans ou plus"}.get(ads.privacy.age_group,"Non renseignée")
-	centered(ui_text("Choix actuel : %s")%ui_text(profile),465,22,TEAL,title_font)
-	button(Rect2(100,575,520,65),"MOINS DE 18 ANS",TEAL)
-	button(Rect2(100,655,520,65),"18 ANS OU PLUS",TEAL)
-	button(Rect2(100,735,520,65),"NE PAS RENSEIGNER",TEAL)
-	centered("Ce choix n'autorise aucune publicité.",839,18,INK)
-	button(Rect2(100,870,520,65),"CONSERVER LA PUBLICITÉ DÉSACTIVÉE",INK)
-	rounded(Rect2(100,960,520,65),Color("ded7c7"),16)
-	centered("Consentement publicitaire : non installé",1001,18,INK)
-	centered("Aucun formulaire de consentement n'est nécessaire ici.",1063,16,INK)
+	var lines=["Le record et les réglages restent sur ton appareil.","Tes pièces et tes achats sont sauvegardés."]
+	for i in range(lines.size()):centered(lines[i],340+i*60,22,INK)
 	button(Rect2(100,1100,520,70),"RETOUR",TEAL)
-	centered("Âge inconnu ou mineur : protection par défaut.",1224,17,INK)
 
 func survival_icon(index: int,pos: Vector2,size: float):
 	var texture: Texture2D=preload("res://assets/survival_icons.png")
@@ -1404,33 +1362,6 @@ func clear_assailants(kind: String):
 	enemies=enemies.filter(func(e):return e.hp>0)
 
 
-func open_mock_ad(action: String):
-	if action=="continue" and (mode!="end" or continues_used>=2):return
-	if action=="start" and mode!="menu":return
-	mock_action=action
-	mode="mock_ad"
-	drag_active=false;movement_finger=-1
-
-func close_mock_ad():
-	if mode!="mock_ad":return
-	var action=mock_action;mock_action=""
-	if action=="start":start_game()
-	elif action=="continue" and continues_used<2:
-		continues_used+=1
-		life=100;invincible=3.0;capture_timer=0
-		mode="play";ads.in_round=true
-		drag_active=false;movement_finger=-1;finger_target=player_x;finger_depth=player_p
-
-func draw_mock_ad():
-	draw_rect(Rect2(0,0,720,1280),PAPER)
-	centered("ICI PUB",540,78,TEAL,title_font)
-	centered("Simulation · aucune vraie publicité",610,24,INK)
-	centered("Ferme avec la croix pour continuer",660,23,INK)
-	if mock_action=="continue":centered("Reprise avec ton score et 100 % de vie",715,23,INK)
-	rounded(Rect2(620,28,72,72),INK,14)
-	draw_line(Vector2(641,49),Vector2(671,79),PAPER,5,true)
-	draw_line(Vector2(671,49),Vector2(641,79),PAPER,5,true)
-
 func draw_special_symbol(kind: String,pos: Vector2,size: float):
 	if kind=="storm":
 		var points=PackedVector2Array([pos+Vector2(0.1,-0.5)*size,pos+Vector2(-0.4,0.1)*size,pos+Vector2(0,0.1)*size,pos+Vector2(-0.1,0.5)*size,pos+Vector2(0.4,-0.1)*size,pos+Vector2(0,-0.1)*size])
@@ -1481,8 +1412,7 @@ func _on_intro_finished():
 	if mode!="cinematic":return
 	notebook.intro_seen=true
 	notebook.save_data()
-	mode="menu"
-	open_mock_ad("start")
+	start_game()
 
 func _on_intro_cue(kind: String):
 	if kind=="alarm" and mode=="cinematic":beep("alarm")

@@ -1,5 +1,7 @@
 extends RefCounted
 # Persistent cosmetic economy; no influence on gameplay RNG or combat.
+const TEST_ALL_CLOTHES=false
+var purchased_equipment={}
 const SAVE_PATH="user://wardrobe.cfg"
 const TASKS=[
  {"id":"first_steps","title":"LA TERREUR DU QUARTIER","text":"Vaincs 50 assaillants, sur plusieurs parties.","event":"kills","goal":50,"run":false,"coins":100},
@@ -16,13 +18,13 @@ const TASKS=[
 ]
 const RANKS=["PETIT FARCEUR","CANCRE DU QUARTIER","TERREUR DU VILLAGE","CHENAPAN LÉGENDAIRE"]
 const THRESHOLDS=[0,3,6,11]
-const CATEGORIES=["shoes","shorts","tops","hats","costumes"]
-const CATEGORY_NAMES=["BASKETS","SHORTS","HAUTS","TÊTES","TENUES"]
+const CATEGORIES=["shoes","shorts","tops","hats","backpacks","costumes"]
+const CATEGORY_NAMES=["BASKETS","SHORTS","HAUTS","TÊTES","SACS À DOS","TENUES"]
 var g
 var renderer
 var catalog: Array=[]
 var owned: Array=[]
-var equipped={"shoes":"","shorts":"","tops":"","hats":"","costumes":""}
+var equipped={"shoes":"","shorts":"","tops":"","hats":"","backpacks":"","costumes":""}
 var coins=0
 var earned=0
 var spent=0
@@ -47,6 +49,7 @@ var save_clock=0.0
 var last_save_error=OK
 var selected_tab=0
 var category_index=0
+var preview_back=false
 var dressing_open=false
 var shop_index=0
 var dress_index=0
@@ -64,6 +67,7 @@ func setup(game,path: String=SAVE_PATH):
  g=game;save_path=path
  catalog=JSON.parse_string(FileAccess.get_file_as_string("res://progression/catalog.json"))
  load_data()
+ purchased_equipment=equipped.duplicate()
  refresh_active()
  renderer=load("res://progression/wardrobe_renderer.gd").new()
  renderer.setup(self)
@@ -112,7 +116,7 @@ func load_data():
 
 func save_data() -> bool:
  var cfg=ConfigFile.new()
- var data={"schema":2,"coins":coins,"earned":earned,"spent":spent,"task_cursor":task_cursor,"cycle":cycle,"value":current_value(),"total_completed":total_completed,"legacy_completed":legacy_completed,"owned":owned,"equipped":equipped,"done":done,"rounds":rounds,"intro_seen":intro_seen,"wait_new_run":wait_new_run}
+ var data={"schema":2,"coins":coins,"earned":earned,"spent":spent,"task_cursor":task_cursor,"cycle":cycle,"value":current_value(),"total_completed":total_completed,"legacy_completed":legacy_completed,"owned":owned,"equipped":purchased_equipment if TEST_ALL_CLOTHES else equipped,"done":done,"rounds":rounds,"intro_seen":intro_seen,"wait_new_run":wait_new_run}
  for key in data:cfg.set_value("collection",key,data[key])
  last_save_error=cfg.save(save_path+".tmp")
  if last_save_error!=OK:return false
@@ -197,13 +201,15 @@ func next_item(cat: String) -> Dictionary:
   if not owned.has(item.id):return item
  return {}
 func visible_items(cat: String) -> Array:
+ if TEST_ALL_CLOTHES:return items_for(cat)
  var result=[]
  for item in items_for(cat):
-  if owned.has(item.id):result.append(item)
+  if can_wear(item.id):result.append(item)
  var upcoming=next_item(cat)
  if not upcoming.is_empty():result.append(upcoming)
  return result
 func buy(id: String) -> bool:
+ if TEST_ALL_CLOTHES:return false
  var item=item_by_id(id)
  if item.is_empty() or owned.has(id):return false
  if next_item(item.category).get("id","")!=id or coins<item.price:return false
@@ -211,9 +217,11 @@ func buy(id: String) -> bool:
  if not save_data():
   coins+=item.price;spent-=item.price;owned.erase(id);return false
  return true
+func can_wear(id: String) -> bool:
+ return TEST_ALL_CLOTHES or owned.has(id)
 func equip_item(id: String) -> bool:
  var item=item_by_id(id)
- if item.is_empty() or not owned.has(id):return false
+ if item.is_empty() or not can_wear(id):return false
  var before=equipped.duplicate()
  equipped[item.category]=id
  if item.category!="costumes":equipped.costumes=""
@@ -238,7 +246,7 @@ func draw_book():
  g.label("LE CARNET DE BÊTISES",Vector2(48,73),37,g.PAPER,g.title_font)
  g.label(title(),Vector2(48,117),25,g.GOLD,g.title_font)
  g.label(coins_text(),Vector2(48,164),33,g.GOLD,g.title_font)
- g.label("Des vêtements, aucun bonus de puissance.",Vector2(48,203),19,g.PAPER)
+ g.label("VERSION TEST : TOUT EST DISPONIBLE" if TEST_ALL_CLOTHES else "Des vêtements, aucun bonus de puissance.",Vector2(48,203),19,g.PAPER)
  var tabs=["DÉFI","ACHETER","VESTIAIRE","PALMARÈS"]
  for i in tabs.size():g.button(Rect2(24+i*174,250,150,62),tabs[i],g.TEAL if selected_tab==i else g.INK)
  if selected_tab==0:draw_tasks()
@@ -265,11 +273,13 @@ func draw_tasks():
  g.centered("Les défis reviennent pour gagner d'autres pièces.",1000,20,g.TEAL)
  g.button(Rect2(110,1040,500,67),"JOUER")
  g.button(Rect2(110,1120,500,50),"PASSER CE DÉFI",g.PURPLE)
+func category_rect(i: int) -> Rect2:
+ return Rect2(24+i*113,332,107,56)
 func draw_categories():
  for i in CATEGORIES.size():
-  var r=Rect2(24+i*139,332,132,56)
+  var r=category_rect(i)
   g.rounded(r,g.TEAL if category_index==i else g.PURPLE,12)
-  fit_label(CATEGORY_NAMES[i],Rect2(r.position.x+5,r.position.y+36,122,40),22,g.PAPER,g.title_font)
+  fit_label(CATEGORY_NAMES[i],Rect2(r.position.x+5,r.position.y+36,r.size.x-10,40),20,g.PAPER,g.title_font)
 func shop_item() -> Dictionary:
  var visible=items_for(CATEGORIES[category_index])
  if visible.is_empty():return {}
@@ -278,6 +288,7 @@ func shop_item() -> Dictionary:
 func shop_cell(i: int) -> Rect2:
  return Rect2(28+(i%4)*170,420+int(i/4)*124,154,112)
 func shop_locked(item: Dictionary) -> bool:
+ if TEST_ALL_CLOTHES:return false
  return not owned.has(item.id) and item.id!=visible_items(CATEGORIES[category_index])[-1].id
 func draw_shop():
  draw_categories()
@@ -295,11 +306,18 @@ func draw_shop():
    g.draw_circle(c+Vector2(0,-2),4,g.GOLD)
   else:
    renderer.draw_item(item,art)
-   fit_label("ARTICLE POSSÉDÉ" if owned.has(item.id) else g.ui_text("%d PIÈCES")%item.price,Rect2(r.position.x+4,r.end.y-8,r.size.x-8,25),18,g.TEAL,g.title_font)
+   if not can_wear(item.id):
+    var badge=r.position+Vector2(r.size.x-22,21)
+    g.draw_circle(badge,19,g.PAPER)
+    g.draw_arc(badge+Vector2(0,-5),7,PI,TAU,16,g.INK,3,true)
+    g.rounded(Rect2(badge+Vector2(-10,-5),Vector2(20,16)),g.INK,4)
+    g.draw_circle(badge+Vector2(0,1),2,g.GOLD)
+
+   fit_label("ESSAYER" if TEST_ALL_CLOTHES else "ARTICLE POSSÉDÉ" if owned.has(item.id) else g.ui_text("%d PIÈCES")%item.price,Rect2(r.position.x+4,r.end.y-8,r.size.x-8,25),18,g.TEAL,g.title_font)
  var selected=shop_item()
  if not selected.is_empty() and not shop_locked(selected):
   fit_label(selected.name,Rect2(40,1070,640,36),26,g.INK,g.title_font)
-  g.button(Rect2(100,1090,520,62),"CHOISIR DANS VESTIAIRE" if owned.has(selected.id) else "ACHETER",g.TEAL if owned.has(selected.id) or coins>=selected.price else g.INK)
+  g.button(Rect2(100,1090,520,62),"CHOISIR DANS VESTIAIRE" if can_wear(selected.id) else "ACHETER",g.TEAL if can_wear(selected.id) or coins>=selected.price else g.INK)
 func draw_quest_hud():
  var t=task()
  g.rounded(Rect2(18,91,684,73),g.PAPER,12,2)
@@ -308,7 +326,7 @@ func draw_quest_hud():
 func dress_options() -> Array:
  var result=[{}]
  for item in items_for(CATEGORIES[category_index]):
-  if owned.has(item.id):result.append(item)
+  if can_wear(item.id):result.append(item)
  return result
 func dress_item() -> Dictionary:
  var options=dress_options();dress_index=clampi(dress_index,0,options.size()-1);return options[dress_index]
@@ -325,10 +343,13 @@ func draw_dressing():
  var preview=equipped.duplicate()
  preview[CATEGORIES[category_index]]=item.get("id","")
  if CATEGORIES[category_index]!="costumes":preview.costumes=""
- renderer.draw_hero(1,Vector2(360,785),325,Color.WHITE,0,preview)
+ renderer.draw_hero(0 if preview_back else 1,Vector2(360,760),300,Color.WHITE,0,preview)
+ g.button(Rect2(230,780,70,50),"‹",g.TEAL)
+ g.button(Rect2(420,780,70,50),"›",g.TEAL)
+ fit_label("DOS" if preview_back else "FACE",Rect2(305,813,110,26),20,g.TEAL,g.title_font)
  g.button(Rect2(34,565,76,66),"‹",g.PURPLE);g.button(Rect2(610,565,76,66),"›",g.PURPLE)
- fit_label(item.get("name","TENUE D'ORIGINE"),Rect2(44,842,632,40),30,g.INK,g.title_font)
- g.centered("Aucun achat dans cette catégorie." if dress_options().size()==1 else "Aperçu : confirme pour porter cet article.",886,20)
+ fit_label(item.get("name","TENUE D'ORIGINE"),Rect2(44,870,632,40),30,g.INK,g.title_font)
+ g.centered("Aucun achat dans cette catégorie." if dress_options().size()==1 else "Aperçu : confirme pour porter cet article.",904,18)
  var is_equipped=equipped[CATEGORIES[category_index]]==item.get("id","")
  g.button(Rect2(100,923,520,70),"ÉQUIPÉ" if is_equipped else "ÉQUIPER",g.INK if is_equipped else g.TEAL)
  g.button(Rect2(100,1010,520,62),"TENUE D'ORIGINE",g.PURPLE)
@@ -342,7 +363,7 @@ func draw_honors():
  g.centered(g.ui_text("Record : %d points")%g.best,865,27,g.TEAL,g.title_font)
  g.centered(g.ui_text("Défis réussis : %d")%total_completed,910,23)
  g.centered(g.ui_text("Pièces gagnées : %d")%earned,952,23)
- g.centered(g.ui_text("Articles possédés : %d / 84")%owned.size(),994,23)
+ g.centered(g.ui_text("Articles possédés : %d / %d")%[owned.size(),catalog.size()],994,23)
  g.centered(g.ui_text("Parties terminées : %d")%rounds,1036,23)
  if legacy_completed>0:g.centered(g.ui_text("Anciens défis conservés : %d")%legacy_completed,1080,20)
 func draw_modal():
@@ -379,8 +400,10 @@ func handle_book(pos: Vector2):
   if Rect2(100,923,520,70).has_point(pos):dressing_open=true;dress_index=0
   return
  for i in CATEGORIES.size():
-  if Rect2(24+i*139,332,132,56).has_point(pos):
-   category_index=i;shop_index=maxi(0,visible_items(CATEGORIES[i]).size()-1);dress_index=0;return
+  if category_rect(i).has_point(pos):
+   category_index=i;shop_index=maxi(0,visible_items(CATEGORIES[i]).size()-1);dress_index=0
+   if CATEGORIES[i]=="backpacks":preview_back=true
+   return
  if selected_tab==1:
   var options=items_for(CATEGORIES[category_index])
   for i in options.size():
@@ -390,7 +413,7 @@ func handle_book(pos: Vector2):
   if Rect2(100,1090,520,62).has_point(pos):
    var item=shop_item()
    if shop_locked(item):return
-   if owned.has(item.id):
+   if can_wear(item.id):
     selected_tab=2;dressing_open=true
     var available=dress_options()
     for i in available.size():
@@ -398,6 +421,8 @@ func handle_book(pos: Vector2):
    elif coins>=item.price:modal="buy";modal_item=item.id
 
  else:
+  if Rect2(230,780,70,50).has_point(pos) or Rect2(420,780,70,50).has_point(pos):
+   preview_back=not preview_back;return
   var options=dress_options()
   if Rect2(34,565,76,66).has_point(pos):dress_index=posmod(dress_index-1,options.size())
   elif Rect2(610,565,76,66).has_point(pos):dress_index=posmod(dress_index+1,options.size())
@@ -437,7 +462,6 @@ func draw_summary():
  g.button(Rect2(70,888,280,62),"MON CARNET",g.PURPLE)
  g.button(Rect2(370,888,280,62),"PARTAGER",g.INK)
  g.button(Rect2(70,970,580,62),"MENU",g.INK)
- if g.mode=="end" and g.continues_used<2:g.button(Rect2(70,1054,580,62),g.ui_text("CONTINUER · PUB (%d/2)")%(2-g.continues_used),g.PURPLE)
  if share_notice!="":g.centered(share_notice,1165,18)
 
 func captor_line() -> String:
@@ -451,7 +475,6 @@ func handle_summary(pos: Vector2):
  elif Rect2(70,888,280,62).has_point(pos):open_book(g.mode)
  elif Rect2(370,888,280,62).has_point(pos):share_score()
  elif Rect2(70,970,580,62).has_point(pos):g.mode="menu"
- elif Rect2(70,1054,580,62).has_point(pos) and g.mode=="end" and g.continues_used<2:g.open_mock_ad("continue")
 
 func share_score():
  if sharing:return

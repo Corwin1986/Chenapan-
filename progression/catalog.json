@@ -1,0 +1,786 @@
+[
+  {
+    "id": "shoes_00",
+    "category": "shoes",
+    "name": "Tomate turbo",
+    "sprite": 0,
+    "order": 0,
+    "price": 500
+  },
+  {
+    "id": "shoes_01",
+    "category": "shoes",
+    "name": "Cornichon express",
+    "sprite": 1,
+    "order": 1,
+    "price": 500
+  },
+  {
+    "id": "shoes_02",
+    "category": "shoes",
+    "name": "Baguettes de course",
+    "sprite": 2,
+    "order": 2,
+    "price": 500
+  },
+  {
+    "id": "shoes_03",
+    "category": "shoes",
+    "name": "Camembert volant",
+    "sprite": 3,
+    "order": 3,
+    "price": 500
+  },
+  {
+    "id": "shoes_04",
+    "category": "shoes",
+    "name": "Sardines sportives",
+    "sprite": 4,
+    "order": 4,
+    "price": 500
+  },
+  {
+    "id": "shoes_05",
+    "category": "shoes",
+    "name": "Grenouilles bondissantes",
+    "sprite": 5,
+    "order": 5,
+    "price": 500
+  },
+  {
+    "id": "shoes_06",
+    "category": "shoes",
+    "name": "Abeilles pressées",
+    "sprite": 6,
+    "order": 6,
+    "price": 500
+  },
+  {
+    "id": "shoes_07",
+    "category": "shoes",
+    "name": "Coccinelles rapides",
+    "sprite": 7,
+    "order": 7,
+    "price": 500
+  },
+  {
+    "id": "shoes_18",
+    "category": "shoes",
+    "name": "Disco du village",
+    "sprite": 18,
+    "order": 8,
+    "price": 500
+  },
+  {
+    "id": "shoes_09",
+    "category": "shoes",
+    "name": "Éclairs du préau",
+    "sprite": 9,
+    "order": 9,
+    "price": 500
+  },
+  {
+    "id": "shoes_10",
+    "category": "shoes",
+    "name": "Fusées de poche",
+    "sprite": 10,
+    "order": 10,
+    "price": 500
+  },
+  {
+    "id": "shoes_11",
+    "category": "shoes",
+    "name": "Patates de compétition",
+    "sprite": 11,
+    "order": 11,
+    "price": 500
+  },
+  {
+    "id": "shoes_12",
+    "category": "shoes",
+    "name": "Pastèques roulantes",
+    "sprite": 12,
+    "order": 12,
+    "price": 500
+  },
+  {
+    "id": "shoes_13",
+    "category": "shoes",
+    "name": "Bonbons rebelles",
+    "sprite": 13,
+    "order": 13,
+    "price": 500
+  },
+  {
+    "id": "shoes_14",
+    "category": "shoes",
+    "name": "Échiquier express",
+    "sprite": 14,
+    "order": 14,
+    "price": 500
+  },
+  {
+    "id": "shoes_15",
+    "category": "shoes",
+    "name": "Pirates du trottoir",
+    "sprite": 15,
+    "order": 15,
+    "price": 500
+  },
+  {
+    "id": "shoes_17",
+    "category": "shoes",
+    "name": "Canards déchaînés",
+    "sprite": 17,
+    "order": 16,
+    "price": 500
+  },
+  {
+    "id": "shoes_16",
+    "category": "shoes",
+    "name": "Renard furtif",
+    "sprite": 16,
+    "order": 17,
+    "price": 500
+  },
+  {
+    "id": "shoes_08",
+    "category": "shoes",
+    "name": "Nuages aux pieds",
+    "sprite": 8,
+    "order": 18,
+    "price": 500
+  },
+  {
+    "id": "shoes_19",
+    "category": "shoes",
+    "name": "Trophées ambulants",
+    "sprite": 19,
+    "order": 19,
+    "price": 500
+  },
+  {
+    "id": "shorts_00",
+    "category": "shorts",
+    "name": "Carreau de cuisine",
+    "sprite": 0,
+    "order": 0,
+    "price": 500
+  },
+  {
+    "id": "shorts_01",
+    "category": "shorts",
+    "name": "Cornichon chic",
+    "sprite": 1,
+    "order": 1,
+    "price": 500
+  },
+  {
+    "id": "shorts_17",
+    "category": "shorts",
+    "name": "Canard en vadrouille",
+    "sprite": 17,
+    "order": 2,
+    "price": 500
+  },
+  {
+    "id": "shorts_18",
+    "category": "shorts",
+    "name": "Bal du samedi",
+    "sprite": 18,
+    "order": 3,
+    "price": 500
+  },
+  {
+    "id": "shorts_04",
+    "category": "shorts",
+    "name": "Sardines en vacances",
+    "sprite": 4,
+    "order": 4,
+    "price": 500
+  },
+  {
+    "id": "shorts_05",
+    "category": "shorts",
+    "name": "Nénuphar",
+    "sprite": 5,
+    "order": 5,
+    "price": 500
+  },
+  {
+    "id": "shorts_06",
+    "category": "shorts",
+    "name": "Rayures de guêpe",
+    "sprite": 6,
+    "order": 6,
+    "price": 500
+  },
+  {
+    "id": "shorts_07",
+    "category": "shorts",
+    "name": "Coccinelle géante",
+    "sprite": 7,
+    "order": 7,
+    "price": 500
+  },
+  {
+    "id": "shorts_08",
+    "category": "shorts",
+    "name": "Ciel de récré",
+    "sprite": 8,
+    "order": 8,
+    "price": 500
+  },
+  {
+    "id": "shorts_09",
+    "category": "shorts",
+    "name": "Éclair violet",
+    "sprite": 9,
+    "order": 9,
+    "price": 500
+  },
+  {
+    "id": "shorts_10",
+    "category": "shorts",
+    "name": "Nuit étoilée",
+    "sprite": 10,
+    "order": 10,
+    "price": 500
+  },
+  {
+    "id": "shorts_11",
+    "category": "shorts",
+    "name": "Sac à patates",
+    "sprite": 11,
+    "order": 11,
+    "price": 500
+  },
+  {
+    "id": "shorts_12",
+    "category": "shorts",
+    "name": "Pastèque fraîche",
+    "sprite": 12,
+    "order": 12,
+    "price": 500
+  },
+  {
+    "id": "shorts_13",
+    "category": "shorts",
+    "name": "Berlingot",
+    "sprite": 13,
+    "order": 13,
+    "price": 500
+  },
+  {
+    "id": "shorts_14",
+    "category": "shorts",
+    "name": "Échec au prof",
+    "sprite": 14,
+    "order": 14,
+    "price": 500
+  },
+  {
+    "id": "shorts_15",
+    "category": "shorts",
+    "name": "Corsaire du caniveau",
+    "sprite": 15,
+    "order": 15,
+    "price": 500
+  },
+  {
+    "id": "shorts_16",
+    "category": "shorts",
+    "name": "Queue de renard",
+    "sprite": 16,
+    "order": 16,
+    "price": 500
+  },
+  {
+    "id": "shorts_02",
+    "category": "shorts",
+    "name": "Baguette sous le bras",
+    "sprite": 2,
+    "order": 17,
+    "price": 500
+  },
+  {
+    "id": "shorts_03",
+    "category": "shorts",
+    "name": "Camembert royal",
+    "sprite": 3,
+    "order": 18,
+    "price": 500
+  },
+  {
+    "id": "shorts_19",
+    "category": "shorts",
+    "name": "Champion du village",
+    "sprite": 19,
+    "order": 19,
+    "price": 500
+  },
+  {
+    "id": "tops_00",
+    "category": "tops",
+    "name": "Œuf au plat",
+    "sprite": 0,
+    "order": 0,
+    "price": 500
+  },
+  {
+    "id": "tops_01",
+    "category": "tops",
+    "name": "Sardine superstar",
+    "sprite": 1,
+    "order": 1,
+    "price": 500
+  },
+  {
+    "id": "tops_17",
+    "category": "tops",
+    "name": "Coin-coin la police",
+    "sprite": 17,
+    "order": 2,
+    "price": 500
+  },
+  {
+    "id": "tops_18",
+    "category": "tops",
+    "name": "Vedette du bistrot",
+    "sprite": 18,
+    "order": 3,
+    "price": 500
+  },
+  {
+    "id": "tops_04",
+    "category": "tops",
+    "name": "Cornichon champion",
+    "sprite": 4,
+    "order": 4,
+    "price": 500
+  },
+  {
+    "id": "tops_05",
+    "category": "tops",
+    "name": "Grenouille de compétition",
+    "sprite": 5,
+    "order": 5,
+    "price": 500
+  },
+  {
+    "id": "tops_06",
+    "category": "tops",
+    "name": "Abeille pas sage",
+    "sprite": 6,
+    "order": 6,
+    "price": 500
+  },
+  {
+    "id": "tops_07",
+    "category": "tops",
+    "name": "Attention chenapan",
+    "sprite": 7,
+    "order": 7,
+    "price": 500
+  },
+  {
+    "id": "tops_08",
+    "category": "tops",
+    "name": "Orage de bêtises",
+    "sprite": 8,
+    "order": 8,
+    "price": 500
+  },
+  {
+    "id": "tops_09",
+    "category": "tops",
+    "name": "Super Cancre",
+    "sprite": 9,
+    "order": 9,
+    "price": 500
+  },
+  {
+    "id": "tops_10",
+    "category": "tops",
+    "name": "Fusée de la récré",
+    "sprite": 10,
+    "order": 10,
+    "price": 500
+  },
+  {
+    "id": "tops_11",
+    "category": "tops",
+    "name": "Patate de champion",
+    "sprite": 11,
+    "order": 11,
+    "price": 500
+  },
+  {
+    "id": "tops_12",
+    "category": "tops",
+    "name": "Melon melon",
+    "sprite": 12,
+    "order": 12,
+    "price": 500
+  },
+  {
+    "id": "tops_13",
+    "category": "tops",
+    "name": "Bonbon explosif",
+    "sprite": 13,
+    "order": 13,
+    "price": 500
+  },
+  {
+    "id": "tops_14",
+    "category": "tops",
+    "name": "Roi des bêtises",
+    "sprite": 14,
+    "order": 14,
+    "price": 500
+  },
+  {
+    "id": "tops_15",
+    "category": "tops",
+    "name": "Pirate du goûter",
+    "sprite": 15,
+    "order": 15,
+    "price": 500
+  },
+  {
+    "id": "tops_16",
+    "category": "tops",
+    "name": "Renard filou",
+    "sprite": 16,
+    "order": 16,
+    "price": 500
+  },
+  {
+    "id": "tops_02",
+    "category": "tops",
+    "name": "Baguette magique",
+    "sprite": 2,
+    "order": 17,
+    "price": 500
+  },
+  {
+    "id": "tops_03",
+    "category": "tops",
+    "name": "Fromage ou rien",
+    "sprite": 3,
+    "order": 18,
+    "price": 500
+  },
+  {
+    "id": "tops_19",
+    "category": "tops",
+    "name": "Chenapan numéro un",
+    "sprite": 19,
+    "order": 19,
+    "price": 500
+  },
+  {
+    "id": "hats_00",
+    "category": "hats",
+    "name": "La passoire du chef",
+    "sprite": 0,
+    "order": 0,
+    "price": 1000
+  },
+  {
+    "id": "hats_01",
+    "category": "hats",
+    "name": "Le roi du goûter",
+    "sprite": 1,
+    "order": 1,
+    "price": 1000
+  },
+  {
+    "id": "hats_02",
+    "category": "hats",
+    "name": "Le poisson pas frais",
+    "sprite": 2,
+    "order": 2,
+    "price": 1000
+  },
+  {
+    "id": "hats_03",
+    "category": "hats",
+    "name": "Le potager ambulant",
+    "sprite": 3,
+    "order": 3,
+    "price": 1000
+  },
+  {
+    "id": "hats_04",
+    "category": "hats",
+    "name": "La cocotte de récré",
+    "sprite": 4,
+    "order": 4,
+    "price": 1000
+  },
+  {
+    "id": "hats_05",
+    "category": "hats",
+    "name": "L’antenne à bêtises",
+    "sprite": 5,
+    "order": 5,
+    "price": 1000
+  },
+  {
+    "id": "hats_06",
+    "category": "hats",
+    "name": "La théière distinguée",
+    "sprite": 6,
+    "order": 6,
+    "price": 1000
+  },
+  {
+    "id": "hats_07",
+    "category": "hats",
+    "name": "Le bonnet du cancre",
+    "sprite": 7,
+    "order": 7,
+    "price": 1000
+  },
+  {
+    "id": "hats_08",
+    "category": "hats",
+    "name": "Allez les Bleus",
+    "sprite": 8,
+    "order": 8,
+    "price": 1000
+  },
+  {
+    "id": "hats_09",
+    "category": "hats",
+    "name": "Le grimpeur à pois",
+    "sprite": 9,
+    "order": 9,
+    "price": 1000
+  },
+  {
+    "id": "hats_10",
+    "category": "hats",
+    "name": "Le maillot jaune du village",
+    "sprite": 10,
+    "order": 10,
+    "price": 1000
+  },
+  {
+    "id": "hats_11",
+    "category": "hats",
+    "name": "Le béret baguette",
+    "sprite": 11,
+    "order": 11,
+    "price": 1000
+  },
+  {
+    "id": "hats_12",
+    "category": "hats",
+    "name": "Le pigeon locataire",
+    "sprite": 12,
+    "order": 12,
+    "price": 1000
+  },
+  {
+    "id": "hats_13",
+    "category": "hats",
+    "name": "Le champignon suspect",
+    "sprite": 13,
+    "order": 13,
+    "price": 1000
+  },
+  {
+    "id": "costumes_00",
+    "category": "costumes",
+    "name": "Renard filou",
+    "sprite": 0,
+    "order": 0,
+    "price": 2500
+  },
+  {
+    "id": "costumes_01",
+    "category": "costumes",
+    "name": "Raton du cambriolage",
+    "sprite": 1,
+    "order": 1,
+    "price": 2500
+  },
+  {
+    "id": "costumes_02",
+    "category": "costumes",
+    "name": "Coq du village",
+    "sprite": 2,
+    "order": 2,
+    "price": 2500
+  },
+  {
+    "id": "costumes_03",
+    "category": "costumes",
+    "name": "Grenouille royale",
+    "sprite": 3,
+    "order": 3,
+    "price": 2500
+  },
+  {
+    "id": "costumes_04",
+    "category": "costumes",
+    "name": "Sardine en cavale",
+    "sprite": 4,
+    "order": 4,
+    "price": 2500
+  },
+  {
+    "id": "costumes_05",
+    "category": "costumes",
+    "name": "Épouvantail de récré",
+    "sprite": 5,
+    "order": 5,
+    "price": 2500
+  },
+  {
+    "id": "costumes_06",
+    "category": "costumes",
+    "name": "Chevalier de la casserole",
+    "sprite": 6,
+    "order": 6,
+    "price": 2500
+  },
+  {
+    "id": "costumes_07",
+    "category": "costumes",
+    "name": "Baguette masquée",
+    "sprite": 7,
+    "order": 7,
+    "price": 2500
+  },
+  {
+    "id": "costumes_08",
+    "category": "costumes",
+    "name": "Camembert justicier",
+    "sprite": 8,
+    "order": 8,
+    "price": 2500
+  },
+  {
+    "id": "costumes_09",
+    "category": "costumes",
+    "name": "Dragon du bistrot",
+    "sprite": 9,
+    "order": 9,
+    "price": 2500
+  },
+  {
+    "id": "backpacks_00",
+    "category": "backpacks",
+    "name": "Le sac passoire",
+    "sprite": 0,
+    "order": 0,
+    "price": 1000
+  },
+  {
+    "id": "backpacks_01",
+    "category": "backpacks",
+    "name": "Le sac du roi des biscuits",
+    "sprite": 1,
+    "order": 1,
+    "price": 1000
+  },
+  {
+    "id": "backpacks_02",
+    "category": "backpacks",
+    "name": "Le sac sardine",
+    "sprite": 2,
+    "order": 2,
+    "price": 1000
+  },
+  {
+    "id": "backpacks_03",
+    "category": "backpacks",
+    "name": "Le sac potager",
+    "sprite": 3,
+    "order": 3,
+    "price": 1000
+  },
+  {
+    "id": "backpacks_04",
+    "category": "backpacks",
+    "name": "Le sac en papier",
+    "sprite": 4,
+    "order": 4,
+    "price": 1000
+  },
+  {
+    "id": "backpacks_05",
+    "category": "backpacks",
+    "name": "Le sac à antennes",
+    "sprite": 5,
+    "order": 5,
+    "price": 1000
+  },
+  {
+    "id": "backpacks_06",
+    "category": "backpacks",
+    "name": "Le sac théière",
+    "sprite": 6,
+    "order": 6,
+    "price": 1000
+  },
+  {
+    "id": "backpacks_07",
+    "category": "backpacks",
+    "name": "Le sac du cancre",
+    "sprite": 7,
+    "order": 7,
+    "price": 1000
+  },
+  {
+    "id": "backpacks_08",
+    "category": "backpacks",
+    "name": "Le sac Allez les Bleus",
+    "sprite": 8,
+    "order": 8,
+    "price": 1000
+  },
+  {
+    "id": "backpacks_09",
+    "category": "backpacks",
+    "name": "Le sac à pois du cycliste",
+    "sprite": 9,
+    "order": 9,
+    "price": 1000
+  },
+  {
+    "id": "backpacks_10",
+    "category": "backpacks",
+    "name": "Le sac jaune du cycliste",
+    "sprite": 10,
+    "order": 10,
+    "price": 1000
+  },
+  {
+    "id": "backpacks_11",
+    "category": "backpacks",
+    "name": "Le sac baguette",
+    "sprite": 11,
+    "order": 11,
+    "price": 1000
+  },
+  {
+    "id": "backpacks_12",
+    "category": "backpacks",
+    "name": "Le sac du pigeon",
+    "sprite": 12,
+    "order": 12,
+    "price": 1000
+  },
+  {
+    "id": "backpacks_13",
+    "category": "backpacks",
+    "name": "Le sac champignon",
+    "sprite": 13,
+    "order": 13,
+    "price": 1000
+  }
+]
