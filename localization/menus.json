@@ -2053,5 +2053,105 @@
     "en": "Buy clothes in order within each category.",
     "es": "Compra la ropa en orden dentro de cada categoría.",
     "zh": "按各类别的顺序购买服装。"
+  },
+  "LE CARNET QUOTIDIEN": {
+    "en": "THE DAILY BOOK",
+    "es": "EL CUADERNO DIARIO",
+    "zh": "每日手册"
+  },
+  "PALMARÈS DU JOUR": {
+    "en": "TODAY’S ACHIEVEMENTS",
+    "es": "LOGROS DEL DÍA",
+    "zh": "今日成就"
+  },
+  "Cumul conservé entre les jours": {
+    "en": "Progress carries over between days",
+    "es": "El progreso se conserva entre días",
+    "zh": "进度跨日保留"
+  },
+  "11 DÉFIS DU JOUR ! BONUS +500 PIÈCES": {
+    "en": "11 DAILY CHALLENGES! +500 COINS",
+    "es": "¡11 DESAFÍOS DEL DÍA! +500 MONEDAS",
+    "zh": "今日完成11个挑战！奖励500金币"
+  },
+  "Défis du jour : %d / 11": {
+    "en": "Today’s challenges: %d / 11",
+    "es": "Desafíos de hoy: %d / 11",
+    "zh": "今日挑战：%d / 11"
+  },
+  "BONUS +500 PIÈCES REÇU !": {
+    "en": "+500 COINS BONUS RECEIVED!",
+    "es": "¡BONIFICACIÓN DE 500 MONEDAS RECIBIDA!",
+    "zh": "已获得500金币奖励！"
+  },
+  "11 défis réussis aujourd’hui = +500 pièces": {
+    "en": "11 challenges completed today = +500 coins",
+    "es": "11 desafíos completados hoy = +500 monedas",
+    "zh": "今日完成11个挑战 = 500金币"
+  },
+  "Record du jour : %d points": {
+    "en": "Today’s best: %d points",
+    "es": "Récord de hoy: %d puntos",
+    "zh": "今日最高分：%d"
+  },
+  "Pièces gagnées aujourd’hui : %d": {
+    "en": "Coins earned today: %d",
+    "es": "Monedas ganadas hoy: %d",
+    "zh": "今日获得金币：%d"
+  },
+  "Parties terminées aujourd’hui : %d": {
+    "en": "Games finished today: %d",
+    "es": "Partidas terminadas hoy: %d",
+    "zh": "今日完成局数：%d"
+  },
+  "Remise à zéro à minuit, heure du téléphone.": {
+    "en": "Resets at midnight, using your phone’s time.",
+    "es": "Se reinicia a medianoche según la hora del teléfono.",
+    "zh": "按手机时间在午夜重置。"
+  },
+  "Pièces, achats et défi en cours conservés.": {
+    "en": "Coins, purchases and active challenge are kept.",
+    "es": "Se conservan monedas, compras y el desafío activo.",
+    "zh": "金币、已购物品和当前挑战均保留。"
+  },
+  "CHAUD DEVANT !": {
+    "en": "TOO HOT TO HANDLE!",
+    "es": "¡CUIDADO, QUEMA!",
+    "zh": "热力十足！"
+  },
+  "UN FROID DE CANARD": {
+    "en": "FREEZING COLD",
+    "es": "FRÍO POLAR",
+    "zh": "冰天雪地"
+  },
+  "COUP DE FOUDRE": {
+    "en": "THUNDERSTRUCK",
+    "es": "GOLPE DE RAYO",
+    "zh": "雷霆一击"
+  },
+  "L’OMELETTE DU VILLAGE": {
+    "en": "THE VILLAGE OMELETTE",
+    "es": "LA TORTILLA DEL PUEBLO",
+    "zh": "村庄煎蛋卷"
+  },
+  "Vaincs 50 assaillants avec les boules de feu.": {
+    "en": "Defeat 50 attackers with fireballs.",
+    "es": "Derrota a 50 atacantes con bolas de fuego.",
+    "zh": "用火球击败50名追击者。"
+  },
+  "Vaincs 50 assaillants avec les boules de glace.": {
+    "en": "Defeat 50 attackers with ice balls.",
+    "es": "Derrota a 50 atacantes con bolas de hielo.",
+    "zh": "用冰球击败50名追击者。"
+  },
+  "Vaincs 50 assaillants avec les boules de foudre.": {
+    "en": "Defeat 50 attackers with lightning balls.",
+    "es": "Derrota a 50 atacantes con bolas de rayos.",
+    "zh": "用闪电球击败50名追击者。"
+  },
+  "Vaincs 100 assaillants avec les œufs.": {
+    "en": "Defeat 100 attackers with eggs.",
+    "es": "Derrota a 100 atacantes con huevos.",
+    "zh": "用鸡蛋击败100名追击者。"
   }
 }

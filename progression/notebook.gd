@@ -14,7 +14,11 @@ const TASKS=[
  {"id":"reputation","title":"LA MAUVAISE RÉPUTATION","text":"Atteins 50 000 points dans une seule partie.","event":"score","goal":50000,"run":true,"coins":100},
  {"id":"expert","title":"LES MAINS EN OR","text":"Récupère les 6 lance-pierres, jusqu'au doré.","event":"slings","goal":6,"run":true,"coins":200},
  {"id":"clean_master","title":"INSAISISSABLE","text":"Tiens 2 minutes sans perdre de vie.","event":"clean","goal":120,"run":true,"coins":200},
- {"id":"legend","title":"LA LÉGENDE DU CHENAPAN","text":"Atteins 120 000 points dans une seule partie.","event":"score","goal":120000,"run":true,"coins":200}
+ {"id":"legend","title":"LA LÉGENDE DU CHENAPAN","text":"Atteins 120 000 points dans une seule partie.","event":"score","goal":120000,"run":true,"coins":200},
+ {"id":"fire_master","title":"CHAUD DEVANT !","text":"Vaincs 50 assaillants avec les boules de feu.","event":"fire_kills","goal":50,"run":false,"coins":500},
+ {"id":"ice_master","title":"UN FROID DE CANARD","text":"Vaincs 50 assaillants avec les boules de glace.","event":"ice_kills","goal":50,"run":false,"coins":500},
+ {"id":"electric_master","title":"COUP DE FOUDRE","text":"Vaincs 50 assaillants avec les boules de foudre.","event":"electric_kills","goal":50,"run":false,"coins":500},
+ {"id":"egg_master","title":"L’OMELETTE DU VILLAGE","text":"Vaincs 100 assaillants avec les œufs.","event":"egg_kills","goal":100,"run":false,"coins":500}
 ]
 const RANKS=["PETIT FARCEUR","CANCRE DU QUARTIER","TERREUR DU VILLAGE","CHENAPAN LÉGENDAIRE"]
 const THRESHOLDS=[0,3,6,11]
@@ -29,6 +33,13 @@ var coins=0
 var earned=0
 var spent=0
 var total_completed=0
+var daily_date=""
+var daily_completed=0
+var daily_earned=0
+var daily_best=0
+var daily_rounds=0
+var daily_bonus_claimed=false
+var day_poll_clock=0.0
 var legacy_completed=0
 var done: Array=[]
 var task_cursor=0
@@ -67,10 +78,28 @@ func setup(game,path: String=SAVE_PATH):
  g=game;save_path=path
  catalog=JSON.parse_string(FileAccess.get_file_as_string("res://progression/catalog.json"))
  load_data()
+ ensure_day()
  purchased_equipment=equipped.duplicate()
  refresh_active()
  renderer=load("res://progression/wardrobe_renderer.gd").new()
  renderer.setup(self)
+
+func ensure_day(today: String=""):
+ if today=="":today=Time.get_date_string_from_system(false)
+ # Local calendar day. Moving the clock backwards must not award another daily bonus.
+ if daily_date!="" and today<=daily_date:return
+ daily_date=today;daily_completed=0;daily_earned=0;daily_best=0;daily_rounds=0;daily_bonus_claimed=false
+ # The current challenge, its progress, wallet and equipment survive midnight.
+ dirty=true
+ save_data()
+func poll_day(dt: float):
+ day_poll_clock+=dt
+ if day_poll_clock>=1.0:day_poll_clock=0.0;ensure_day()
+func register_kill(projectile: int):
+ # One kill contributes to the active challenge only. Dogs/storm kills have no projectile.
+ var key={1:"fire_kills",2:"ice_kills",3:"electric_kills",4:"egg_kills"}.get(projectile,"")
+ if task().event=="kills":event("kills")
+ elif key!="":event(key)
 
 func task() -> Dictionary:return TASKS[task_cursor]
 func refresh_active():active=[task().id]
@@ -89,6 +118,12 @@ func load_data():
     rounds=int(old.get_value("notebook","rounds",0))
     legacy_completed=old.get_value("notebook","completed",[]).size()
   return
+ daily_date=str(cfg.get_value("daily","date",""))
+ daily_completed=maxi(0,int(cfg.get_value("daily","completed",0)))
+ daily_earned=maxi(0,int(cfg.get_value("daily","earned",0)))
+ daily_best=maxi(0,int(cfg.get_value("daily","best",0)))
+ daily_rounds=maxi(0,int(cfg.get_value("daily","rounds",0)))
+ daily_bonus_claimed=bool(cfg.get_value("daily","bonus_claimed",false))
  coins=maxi(0,int(cfg.get_value("collection","coins",0)))
  earned=maxi(0,int(cfg.get_value("collection","earned",coins)))
  spent=maxi(0,int(cfg.get_value("collection","spent",0)))
@@ -116,8 +151,10 @@ func load_data():
 
 func save_data() -> bool:
  var cfg=ConfigFile.new()
- var data={"schema":2,"coins":coins,"earned":earned,"spent":spent,"task_cursor":task_cursor,"cycle":cycle,"value":current_value(),"total_completed":total_completed,"legacy_completed":legacy_completed,"owned":owned,"equipped":purchased_equipment if TEST_ALL_CLOTHES else equipped,"done":done,"rounds":rounds,"intro_seen":intro_seen,"wait_new_run":wait_new_run}
+ var data={"schema":3,"coins":coins,"earned":earned,"spent":spent,"task_cursor":task_cursor,"cycle":cycle,"value":current_value(),"total_completed":total_completed,"legacy_completed":legacy_completed,"owned":owned,"equipped":purchased_equipment if TEST_ALL_CLOTHES else equipped,"done":done,"rounds":rounds,"intro_seen":intro_seen,"wait_new_run":wait_new_run}
  for key in data:cfg.set_value("collection",key,data[key])
+ var daily={"date":daily_date,"completed":daily_completed,"earned":daily_earned,"best":daily_best,"rounds":daily_rounds,"bonus_claimed":daily_bonus_claimed}
+ for key in daily:cfg.set_value("daily",key,daily[key])
  last_save_error=cfg.save(save_path+".tmp")
  if last_save_error!=OK:return false
  if FileAccess.file_exists(save_path):DirAccess.copy_absolute(save_path,save_path+".bak")
@@ -126,12 +163,14 @@ func save_data() -> bool:
  return last_save_error==OK
 
 func begin_round():
+ ensure_day()
  refresh_active();newly_done.clear();round_coins=0;clean_seconds=0.0
  previous_life=g.life;run_finished=false;share_notice="";wait_new_run=false
  if task().run:values[task().id]=0
  dirty=true
 
 func event(key: String,amount: float=1.0,absolute: bool=false):
+ ensure_day()
  var t=task()
  if wait_new_run or t.event!=key:return
  var value=float(values.get(t.id,0))
@@ -141,12 +180,18 @@ func event(key: String,amount: float=1.0,absolute: bool=false):
  if value>=t.goal:complete_task()
 
 func complete_task():
+ ensure_day()
  var t=task()
  # Move the cursor and credit once in the same atomic save. Excess events never carry over.
  coins+=t.coins;earned+=t.coins;round_coins+=t.coins;total_completed+=1
+ daily_completed+=1;daily_earned+=t.coins
+ var daily_bonus=daily_completed>=11 and not daily_bonus_claimed
+ if daily_bonus:
+  daily_bonus_claimed=true;coins+=500;earned+=500;daily_earned+=500;round_coins+=500
  if not done.has(t.id):done.append(t.id)
  newly_done.append(t.id)
  toast=g.ui_text("DÉFI RELEVÉ ! +%d PIÈCES")%t.coins;toast_clock=4.0
+ if daily_bonus:toast=g.ui_text("11 DÉFIS DU JOUR ! BONUS +500 PIÈCES");toast_clock=6.0
  task_cursor+=1
  if task_cursor>=TASKS.size():task_cursor=0;cycle+=1
  values={task().id:0};clean_seconds=0.0
@@ -166,6 +211,8 @@ func skip_task() -> bool:
  toast="";toast_clock=0;return true
 
 func tick(dt: float):
+ ensure_day()
+ if g.score>daily_best:daily_best=g.score;dirty=true
  toast_clock=maxf(0,toast_clock-dt)
  if g.life<previous_life:clean_seconds=0.0
  else:clean_seconds+=dt
@@ -181,13 +228,15 @@ func on_damage():
  clean_seconds=0;previous_life=g.life
  if task().event=="clean":values[task().id]=0;dirty=true
 func end_round():
+ ensure_day()
+ daily_best=maxi(daily_best,g.score)
  if task().event=="score":event("score",g.score,true)
- if not run_finished:rounds+=1;run_finished=true
+ if not run_finished:rounds+=1;daily_rounds+=1;run_finished=true
  save_data()
 func rank_index() -> int:
  var r=0
  for i in THRESHOLDS.size():
-  if total_completed+legacy_completed>=THRESHOLDS[i]:r=i
+  if daily_completed>=THRESHOLDS[i]:r=i
  return r
 func title() -> String:return RANKS[rank_index()]
 func item_by_id(id: String) -> Dictionary:
@@ -243,7 +292,7 @@ func coins_text() -> String:return g.ui_text("%d PIÈCES")%coins
 func draw_book():
  g.draw_rect(Rect2(0,0,720,1280),g.PAPER)
  g.rounded(Rect2(24,22,672,208),g.INK,24)
- g.label("LE CARNET DE BÊTISES",Vector2(48,73),37,g.PAPER,g.title_font)
+ g.label("LE CARNET QUOTIDIEN",Vector2(48,73),37,g.PAPER,g.title_font)
  g.label(title(),Vector2(48,117),25,g.GOLD,g.title_font)
  g.label(coins_text(),Vector2(48,164),33,g.GOLD,g.title_font)
  g.label("VERSION TEST : TOUT EST DISPONIBLE" if TEST_ALL_CLOTHES else "Des vêtements, aucun bonus de puissance.",Vector2(48,203),19,g.PAPER)
@@ -262,7 +311,7 @@ func draw_tasks():
  g.rounded(Rect2(34,360,652,480),Color.WHITE,22,2)
  fit_label(t.title,Rect2(54,422,612,40),31,g.INK,g.title_font)
  fit_label(t.text,Rect2(54,483,612,40),25)
- g.centered("Une seule partie" if t.run else "Cumul sur plusieurs parties",532,21,g.PURPLE)
+ g.centered("Une seule partie" if t.run else "Cumul conservé entre les jours",532,21,g.PURPLE)
  g.centered(g.ui_text("Progression : %d / %d")%[current_value(),t.goal],607,32,g.TEAL)
  g.rounded(Rect2(68,642,584,24),Color("e7ddca"),12)
  if current_value()>0:g.rounded(Rect2(68,642,584.0*current_value()/t.goal,24),g.TEAL,12)
@@ -355,17 +404,20 @@ func draw_dressing():
  g.button(Rect2(100,1010,520,62),"TENUE D'ORIGINE",g.PURPLE)
  g.centered("Équiper une pièce retire le costume complet.",1110,19)
 func draw_honors():
+ g.centered("PALMARÈS DU JOUR",347,25,g.TEAL,g.title_font)
  for i in RANKS.size():
-  var y=355+i*112
-  g.rounded(Rect2(36,y,648,96),g.INK if i==rank_index() else Color.WHITE,16,2)
-  g.label(RANKS[i],Vector2(62,y+38),27,g.GOLD if i==rank_index() else g.INK,g.title_font)
-  g.label(g.ui_text("%d défis relevés")%THRESHOLDS[i],Vector2(62,y+73),19,g.PAPER if i==rank_index() else g.TEAL)
- g.centered(g.ui_text("Record : %d points")%g.best,865,27,g.TEAL,g.title_font)
- g.centered(g.ui_text("Défis réussis : %d")%total_completed,910,23)
- g.centered(g.ui_text("Pièces gagnées : %d")%earned,952,23)
- g.centered(g.ui_text("Articles possédés : %d / %d")%[owned.size(),catalog.size()],994,23)
- g.centered(g.ui_text("Parties terminées : %d")%rounds,1036,23)
- if legacy_completed>0:g.centered(g.ui_text("Anciens défis conservés : %d")%legacy_completed,1080,20)
+  var y=370+i*99
+  g.rounded(Rect2(36,y,648,88),g.INK if i==rank_index() else Color.WHITE,16,2)
+  g.label(RANKS[i],Vector2(62,y+35),26,g.GOLD if i==rank_index() else g.INK,g.title_font)
+  g.label(g.ui_text("%d défis relevés")%THRESHOLDS[i],Vector2(62,y+65),19,g.PAPER if i==rank_index() else g.TEAL)
+ g.centered(g.ui_text("Défis du jour : %d / 11")%daily_completed,805,26,g.TEAL,g.title_font)
+ g.centered("BONUS +500 PIÈCES REÇU !" if daily_bonus_claimed else "11 défis réussis aujourd’hui = +500 pièces",850,23,g.PURPLE,g.title_font)
+ g.centered(g.ui_text("Record du jour : %d points")%daily_best,904,23)
+ g.centered(g.ui_text("Pièces gagnées aujourd’hui : %d")%daily_earned,944,21)
+ g.centered(g.ui_text("Parties terminées aujourd’hui : %d")%daily_rounds,984,21)
+ g.centered(g.ui_text("Articles possédés : %d / %d")%[owned.size(),catalog.size()],1024,21)
+ g.centered("Remise à zéro à minuit, heure du téléphone.",1080,20,g.TEAL)
+ g.centered("Pièces, achats et défi en cours conservés.",1117,20)
 func draw_modal():
  g.draw_rect(Rect2(0,0,720,1280),Color(0,0,0,0.65))
  g.rounded(Rect2(40,390,640,505),g.PAPER,24,3)

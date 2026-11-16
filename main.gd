@@ -362,6 +362,7 @@ func toggle_sound():
 	save_progress()
 
 func _process(delta):
+	if notebook!=null:notebook.poll_day(delta)
 	var dt = minf(delta,0.1)
 	anim += dt
 	if anim>3.0:
@@ -533,18 +534,18 @@ func update_projectiles(dt: float):
 
 func hit_enemy(e: Dictionary,el: int,power: float):
 	var multiplier=[1.0,3.0,1.0,2.0,0.5][el]
-	damage_enemy(e,power*multiplier)
+	damage_enemy(e,power*multiplier,el)
 	burst(enemy_pos(e)-Vector2(0,45),[GOLD,CORAL,SKY,GOLD,Color("a9c66b")][el],5)
 	if el==2:e.frozen=3.0
 	if el==3:e.slow=3.0
 
-func damage_enemy(e: Dictionary,amount: float):
+func damage_enemy(e: Dictionary,amount: float,projectile: int=-1):
 	if e.hp<=0:return
 	e.hp-=amount
 	e.hit=0.12
 	if e.hp<=0:
 		kills+=1
-		if notebook!=null:notebook.event("kills")
+		if notebook!=null:notebook.register_kill(projectile)
 		combo+=1
 		best_combo=maxi(best_combo,combo)
 		kill_points+=100
@@ -959,7 +960,7 @@ func draw_menu():
 	centered("VILLAGE VS",106,54,INK,title_font)
 	centered("CHENAPAN",177,75,INK,title_font)
 	centered("Recherché pour excès de bêtises",225,22,TEAL)
-	centered("Village vs Chenapan · v1.29",1250,18,INK)
+	centered("Village vs Chenapan · v1.30",1250,18,INK)
 	atlas_sprite(2,Vector2(135,598),220,Color.WHITE,-0.10)
 	atlas_sprite(5,Vector2(580,588),220,Color.WHITE,0.08)
 	atlas_sprite(1,Vector2(360,654),310)
